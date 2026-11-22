@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
+    "sap/ui/Device",
     "pe/pucp/tesis/migodcu/model/models"
-], (UIComponent, models) => {
+], (UIComponent, Device, models) => {
     "use strict";
 
     return UIComponent.extend("pe.pucp.tesis.migodcu.Component", {
@@ -21,6 +22,11 @@ sap.ui.define([
 
             // enable routing
             this.getRouter().initialize();
+        },
+
+        // Densidad compacta en escritorio y cómoda en pantallas táctiles (Walkthrough, paso «Content Density»; EH-12)
+        getContentDensityClass() {
+            return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
         }
     });
 });
