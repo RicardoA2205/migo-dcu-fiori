@@ -1,6 +1,22 @@
 <mvc:View controllerName="pe.pucp.tesis.migodcu.controller.Inicio"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page id="pageInicio" title="{i18n>inicioTitulo}">
+        <VBox class="sapUiMediumMargin">
+            <Title text="{i18n>grupoAlmacen}" titleStyle="H2" class="sapUiSmallMarginBottom"/>
+            <HBox wrap="Wrap">
+                <GenericTile id="tile101" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+                    header="{i18n>tile101Titulo}" subheader="{i18n>tile101Subtitulo}" press=".onIrEntrada">
+                    <TileContent footer="{i18n>tile101Pie}">
+                        <ImageContent src="sap-icon://shipping-status"/>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="tile261" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+                    header="{i18n>tile261Titulo}" subheader="{i18n>tile261Subtitulo}" press=".onIrSalida">
+                    <TileContent footer="{i18n>tile261Pie}">
+                        <ImageContent src="sap-icon://factory"/>
+                    </TileContent>
+                </GenericTile>
+            </HBox>
+        </VBox>
     </Page>
 </mvc:View>

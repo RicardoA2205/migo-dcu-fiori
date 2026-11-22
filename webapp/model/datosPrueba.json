@@ -1,0 +1,831 @@
+{
+  "config": {
+    "periodosAbiertos": [
+      "2026-11",
+      "2026-10"
+    ],
+    "formatoGuia": "^T\\d{3}-\\d{8}$",
+    "ejemploGuia": "T001-00004587",
+    "siguienteDocEntrada": 5000000001,
+    "siguienteDocSalida": 4900000001,
+    "tiposVale": [
+      {
+        "clave": "1",
+        "texto": "Vale individual"
+      },
+      {
+        "clave": "3",
+        "texto": "Vale colectivo"
+      }
+    ]
+  },
+  "almacenes": [
+    {
+      "centro": "CENTRO",
+      "almacen": "ALM1",
+      "descripcion": "Descripción del almacén 1"
+    },
+    {
+      "centro": "CENTRO",
+      "almacen": "ALM2",
+      "descripcion": "Descripción del almacén 2"
+    }
+  ],
+  "materiales": [
+    {
+      "material": "MATERIAL-01",
+      "descripcion": "Descripción del material 01",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-02",
+      "descripcion": "Descripción del material 02",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-03",
+      "descripcion": "Descripción del material 03",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-04",
+      "descripcion": "Descripción del material 04",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-05",
+      "descripcion": "Descripción del material 05",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-06",
+      "descripcion": "Descripción del material 06",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-07",
+      "descripcion": "Descripción del material 07",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-08",
+      "descripcion": "Descripción del material 08",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-09",
+      "descripcion": "Descripción del material 09",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-10",
+      "descripcion": "Descripción del material 10",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-11",
+      "descripcion": "Descripción del material 11",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-12",
+      "descripcion": "Descripción del material 12",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-13",
+      "descripcion": "Descripción del material 13",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-14",
+      "descripcion": "Descripción del material 14",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-15",
+      "descripcion": "Descripción del material 15",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-16",
+      "descripcion": "Descripción del material 16",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-17",
+      "descripcion": "Descripción del material 17",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-18",
+      "descripcion": "Descripción del material 18",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-19",
+      "descripcion": "Descripción del material 19",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-20",
+      "descripcion": "Descripción del material 20",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-21",
+      "descripcion": "Descripción del material 21",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-22",
+      "descripcion": "Descripción del material 22",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-23",
+      "descripcion": "Descripción del material 23",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-24",
+      "descripcion": "Descripción del material 24",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-25",
+      "descripcion": "Descripción del material 25",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-26",
+      "descripcion": "Descripción del material 26",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-27",
+      "descripcion": "Descripción del material 27",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-28",
+      "descripcion": "Descripción del material 28",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-29",
+      "descripcion": "Descripción del material 29",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-30",
+      "descripcion": "Descripción del material 30",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-31",
+      "descripcion": "Descripción del material 31",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-32",
+      "descripcion": "Descripción del material 32",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-33",
+      "descripcion": "Descripción del material 33",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-34",
+      "descripcion": "Descripción del material 34",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-35",
+      "descripcion": "Descripción del material 35",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-36",
+      "descripcion": "Descripción del material 36",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-37",
+      "descripcion": "Descripción del material 37",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-38",
+      "descripcion": "Descripción del material 38",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-39",
+      "descripcion": "Descripción del material 39",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "MATERIAL-40",
+      "descripcion": "Descripción del material 40",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "COMPONENTE-1",
+      "descripcion": "Descripción del componente 1",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "COMPONENTE-2",
+      "descripcion": "Descripción del componente 2",
+      "unidad": "UN",
+      "lote": false
+    },
+    {
+      "material": "COMPONENTE-3",
+      "descripcion": "Descripción del componente 3 (por lotes)",
+      "unidad": "UN",
+      "lote": true
+    },
+    {
+      "material": "COMPONENTE-4",
+      "descripcion": "Descripción del componente 4",
+      "unidad": "UN",
+      "lote": false
+    }
+  ],
+  "stock": [
+    {
+      "material": "COMPONENTE-1",
+      "centro": "CENTRO",
+      "almacen": "ALM1",
+      "lote": "",
+      "libre": 6
+    },
+    {
+      "material": "COMPONENTE-2",
+      "centro": "CENTRO",
+      "almacen": "ALM1",
+      "lote": "",
+      "libre": 50
+    },
+    {
+      "material": "COMPONENTE-3",
+      "centro": "CENTRO",
+      "almacen": "ALM1",
+      "lote": "LOTE-1",
+      "libre": 30
+    },
+    {
+      "material": "COMPONENTE-4",
+      "centro": "CENTRO",
+      "almacen": "ALM2",
+      "lote": "",
+      "libre": 20
+    }
+  ],
+  "ordenesCompra": [
+    {
+      "numero": "PEDIDO-P1",
+      "proveedor": "Nombre del proveedor",
+      "fecha": "2026-11-23",
+      "posiciones": [
+        {
+          "pos": 10,
+          "material": "MATERIAL-01",
+          "descripcion": "Descripción del material 01",
+          "cantidadPendiente": 11,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 20,
+          "material": "MATERIAL-02",
+          "descripcion": "Descripción del material 02",
+          "cantidadPendiente": 12,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 30,
+          "material": "MATERIAL-03",
+          "descripcion": "Descripción del material 03",
+          "cantidadPendiente": 13,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 40,
+          "material": "MATERIAL-04",
+          "descripcion": "Descripción del material 04",
+          "cantidadPendiente": 14,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 50,
+          "material": "MATERIAL-05",
+          "descripcion": "Descripción del material 05",
+          "cantidadPendiente": 15,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 60,
+          "material": "MATERIAL-06",
+          "descripcion": "Descripción del material 06",
+          "cantidadPendiente": 16,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 70,
+          "material": "MATERIAL-07",
+          "descripcion": "Descripción del material 07",
+          "cantidadPendiente": 17,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 80,
+          "material": "MATERIAL-08",
+          "descripcion": "Descripción del material 08",
+          "cantidadPendiente": 18,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 90,
+          "material": "MATERIAL-09",
+          "descripcion": "Descripción del material 09",
+          "cantidadPendiente": 19,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 100,
+          "material": "MATERIAL-10",
+          "descripcion": "Descripción del material 10",
+          "cantidadPendiente": 20,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 110,
+          "material": "MATERIAL-11",
+          "descripcion": "Descripción del material 11",
+          "cantidadPendiente": 21,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 120,
+          "material": "MATERIAL-12",
+          "descripcion": "Descripción del material 12",
+          "cantidadPendiente": 22,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 130,
+          "material": "MATERIAL-13",
+          "descripcion": "Descripción del material 13",
+          "cantidadPendiente": 23,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 140,
+          "material": "MATERIAL-14",
+          "descripcion": "Descripción del material 14",
+          "cantidadPendiente": 24,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 150,
+          "material": "MATERIAL-15",
+          "descripcion": "Descripción del material 15",
+          "cantidadPendiente": 25,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 160,
+          "material": "MATERIAL-16",
+          "descripcion": "Descripción del material 16",
+          "cantidadPendiente": 26,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 170,
+          "material": "MATERIAL-17",
+          "descripcion": "Descripción del material 17",
+          "cantidadPendiente": 27,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 180,
+          "material": "MATERIAL-18",
+          "descripcion": "Descripción del material 18",
+          "cantidadPendiente": 28,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 190,
+          "material": "MATERIAL-19",
+          "descripcion": "Descripción del material 19",
+          "cantidadPendiente": 29,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 200,
+          "material": "MATERIAL-20",
+          "descripcion": "Descripción del material 20",
+          "cantidadPendiente": 30,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 210,
+          "material": "MATERIAL-21",
+          "descripcion": "Descripción del material 21",
+          "cantidadPendiente": 31,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 220,
+          "material": "MATERIAL-22",
+          "descripcion": "Descripción del material 22",
+          "cantidadPendiente": 32,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 230,
+          "material": "MATERIAL-23",
+          "descripcion": "Descripción del material 23",
+          "cantidadPendiente": 33,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 240,
+          "material": "MATERIAL-24",
+          "descripcion": "Descripción del material 24",
+          "cantidadPendiente": 34,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 250,
+          "material": "MATERIAL-25",
+          "descripcion": "Descripción del material 25",
+          "cantidadPendiente": 35,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 260,
+          "material": "MATERIAL-26",
+          "descripcion": "Descripción del material 26",
+          "cantidadPendiente": 36,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 270,
+          "material": "MATERIAL-27",
+          "descripcion": "Descripción del material 27",
+          "cantidadPendiente": 37,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 280,
+          "material": "MATERIAL-28",
+          "descripcion": "Descripción del material 28",
+          "cantidadPendiente": 38,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 290,
+          "material": "MATERIAL-29",
+          "descripcion": "Descripción del material 29",
+          "cantidadPendiente": 39,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 300,
+          "material": "MATERIAL-30",
+          "descripcion": "Descripción del material 30",
+          "cantidadPendiente": 40,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 310,
+          "material": "MATERIAL-31",
+          "descripcion": "Descripción del material 31",
+          "cantidadPendiente": 41,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 320,
+          "material": "MATERIAL-32",
+          "descripcion": "Descripción del material 32",
+          "cantidadPendiente": 42,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 330,
+          "material": "MATERIAL-33",
+          "descripcion": "Descripción del material 33",
+          "cantidadPendiente": 43,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 340,
+          "material": "MATERIAL-34",
+          "descripcion": "Descripción del material 34",
+          "cantidadPendiente": 44,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 350,
+          "material": "MATERIAL-35",
+          "descripcion": "Descripción del material 35",
+          "cantidadPendiente": 45,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 360,
+          "material": "MATERIAL-36",
+          "descripcion": "Descripción del material 36",
+          "cantidadPendiente": 46,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 370,
+          "material": "MATERIAL-37",
+          "descripcion": "Descripción del material 37",
+          "cantidadPendiente": 47,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 380,
+          "material": "MATERIAL-38",
+          "descripcion": "Descripción del material 38",
+          "cantidadPendiente": 48,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 390,
+          "material": "MATERIAL-39",
+          "descripcion": "Descripción del material 39",
+          "cantidadPendiente": 49,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 400,
+          "material": "MATERIAL-40",
+          "descripcion": "Descripción del material 40",
+          "cantidadPendiente": 50,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        }
+      ]
+    },
+    {
+      "numero": "PEDIDO-P2",
+      "proveedor": "Nombre del proveedor",
+      "fecha": "2026-11-23",
+      "posiciones": [
+        {
+          "pos": 10,
+          "material": "MATERIAL-01",
+          "descripcion": "Descripción del material 01",
+          "cantidadPendiente": 11,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 20,
+          "material": "MATERIAL-02",
+          "descripcion": "Descripción del material 02",
+          "cantidadPendiente": 12,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "tipoStock": "Libre utilización"
+        },
+        {
+          "pos": 30,
+          "material": "MATERIAL-03",
+          "descripcion": "Descripción del material 03",
+          "cantidadPendiente": 13,
+          "unidad": "UN",
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "tipoStock": "Libre utilización"
+        }
+      ]
+    }
+  ],
+  "ordenesProduccion": [
+    {
+      "numero": "ORDEN-P1",
+      "estado": "LIB",
+      "material": "MATERIAL-FABRICAR",
+      "descripcion": "Descripción del producto",
+      "cantidad": 10,
+      "unidad": "UN",
+      "fechaInicio": "2026-11-23",
+      "componentes": [
+        {
+          "pos": 10,
+          "material": "COMPONENTE-1",
+          "cantidadNecesaria": 10,
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "lote": ""
+        },
+        {
+          "pos": 20,
+          "material": "COMPONENTE-2",
+          "cantidadNecesaria": 20,
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "lote": ""
+        },
+        {
+          "pos": 30,
+          "material": "COMPONENTE-3",
+          "cantidadNecesaria": 5,
+          "centro": "CENTRO",
+          "almacen": "ALM1",
+          "lote": ""
+        },
+        {
+          "pos": 40,
+          "material": "COMPONENTE-4",
+          "cantidadNecesaria": 8,
+          "centro": "CENTRO",
+          "almacen": "ALM2",
+          "lote": ""
+        }
+      ]
+    },
+    {
+      "numero": "ORDEN-SIN-LIBERAR",
+      "estado": "ABIE",
+      "material": "MATERIAL-FABRICAR",
+      "descripcion": "Descripción del producto",
+      "cantidad": 10,
+      "unidad": "UN",
+      "fechaInicio": "2026-11-23",
+      "componentes": []
+    }
+  ]
+}

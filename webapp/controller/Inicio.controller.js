@@ -1,10 +1,7 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], (Controller) => {
+sap.ui.define(["./BaseController"], (BaseController) => {
     "use strict";
-
-    return Controller.extend("pe.pucp.tesis.migodcu.controller.Inicio", {
-        onInit() {
-        }
+    return BaseController.extend("pe.pucp.tesis.migodcu.controller.Inicio", {
+        onIrEntrada() { this.getRouter().navTo("entradaOrden"); },
+        onIrSalida() { this.getRouter().navTo("salidaOrden"); }
     });
 });
