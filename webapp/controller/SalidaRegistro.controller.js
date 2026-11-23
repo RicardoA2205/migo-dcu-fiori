@@ -129,7 +129,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 }
                 if (p.faltante > 0) {
                     err(`/posiciones/${i}/cantidadEntregar`, this.getText("errStock", [p.pos]),
-                        this.getText("errStockDesc", [p.pos, p.descripcion, nCant, p.unidad, p.stock, p.almacen, p.faltante]), "STOCK");
+                        this.getText("errStockDesc", [p.pos, p.descripcion, nCant, p.unidad, p.stock, p.almacen, p.faltante, p.material]), "STOCK");
                 }
             });
             return this.getModel("message").getData().length === 0;
