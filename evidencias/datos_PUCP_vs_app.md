@@ -1,6 +1,6 @@
 # Documento en el sistema SAP de prueba de la PUCP ↔ dato en la app
 
-Se llena cuando los documentos estén creados (v1.2). Las capturas de ME23N, CO03 y MMBE las agrega Ricardo, con el usuario recortado.
+**No aplica desde el 22/11/2026:** por decisión del proyecto no se replican los datos del sistema SAP de prueba de la PUCP; la app usa sus propios datos de prueba (Anexo B). La tabla queda como referencia.
 
 | Dato | Transacción (PUCP) | Documento / valor en la PUCP | Clave en `datosPrueba.json` | Valor en la app | Captura |
 |---|---|---|---|---|---|

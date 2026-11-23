@@ -1,6 +1,6 @@
 # Correcciones de la evaluación heurística del R4.1 (Tabla L3) en la app
 
-Las 23 recomendaciones de la Tabla L3 (leída del Word de la tesis) se corrigieron **solo en la app** (las pantallas de Figma del R3.2 no se tocaron). Capturas a 1440×900 en `evidencias/capturas/` (por ahora con datos de ejemplo; se vuelven a generar con los datos de la PUCP en v1.2 con `npm run capturas`). Falta poner al lado cada captura «antes» (Figma, Anexo K).
+Las 23 recomendaciones de la Tabla L3 (leída del Word de la tesis) se corrigieron **solo en la app** (las pantallas de Figma del R3.2 no se tocaron). Capturas a 1440×900 en `evidencias/capturas/` (con los datos de prueba de la app; se regeneran con `npm run capturas`). Falta poner al lado cada captura «antes» (Figma, Anexo K).
 
 | EH | Sev. | Estado | Cambio hecho en la app | Commit(s) | Captura «después» |
 |---|---|---|---|---|---|

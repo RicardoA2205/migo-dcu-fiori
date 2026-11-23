@@ -1,6 +1,6 @@
 # Autoprueba con los criterios de aceptación (Tabla H1)
 
-Recorrida el 22/11/2026 con `npm start` (launchpad de prueba de SAP Fiori, SAPUI5 1.136), ventana de 1440×900 al 100 %, **con los datos de ejemplo del Anexo B**. Repetir con los datos de la PUCP (v1.2) antes de pasar la app a los especialistas.
+Recorrida el 22/11/2026 con `npm start` (launchpad de prueba de SAP Fiori, SAPUI5 1.136), ventana de 1440×900 al 100 %, **con los datos de ejemplo del Anexo B**. Por la decisión del 22/11/2026 no se usan datos del sistema SAP de prueba de la PUCP; esta autoprueba vale para la v1.2.
 
 - [x] HU-01: se entra a cada tarea desde su mosaico, sin código de transacción (P00).
 - [x] HU-02: la clase de movimiento se ve con su descripción (101 y 261) en P101-01/02 y P261-01/02 y en los resúmenes.

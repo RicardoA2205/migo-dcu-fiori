@@ -19,9 +19,9 @@
 | 0.1 | `v0.1` | Proyecto base (SAP Fiori tools, plantilla Basic, SAPUI5 1.136) |
 | 1.0 | `v1.0` | Flujo de entrada por compras (P00, P101-01 a P101-04) |
 | 1.1 | `v1.1` | Flujo de salida por producción (P261-01 a P261-05) |
-| 1.2 | — | Pendiente: datos reales de la PUCP en `datosPrueba.json` |
+| 1.2 | `v1.2` | Complementos de EH-05, EH-08, EH-18, EH-19 y EH-22 (Tablas K1 y L3) y publicación en GitHub Pages; versión que validan los especialistas |
 
-Código en GitHub (rama `main` y etiquetas v0.1, v1.0 y v1.1) y app publicada en GitHub Pages.
+Código en GitHub (rama `main` y etiquetas v0.1, v1.0, v1.1 y v1.2) y app publicada en GitHub Pages.
 
 ## Correcciones EH
 
@@ -49,8 +49,8 @@ Los 23 cerrados. Con las Tablas K1 y L3 del Word se corrigieron EH-08 y EH-19 y 
 
 ## Lo que falta
 
-1. **Datos de la PUCP** (Ricardo): crear los documentos (ME21N, CO01 con una orden sin liberar, MIGO 561 o MMBE, MMRV), llenar `datos_prueba.xlsx`, copiarlos a `datosPrueba.json` → **v1.2**; luego `npm run capturas`, `npm run pages`, push y volver a recorrer la URL de Pages.
+1. Datos: por la decisión del 22/11/2026 no se replican los datos del sistema SAP de prueba de la PUCP; la app usa sus propios datos de prueba (Anexo B). `datos_prueba.xlsx` y `datos_PUCP_vs_app.md` quedan solo como referencia.
 2. Capturas «antes» de cada EH (Figma, Anexo K) para ponerlas junto a las de «después».
 3. Validar con el especialista en HCI los textos nuevos (ayuda, aviso de pérdida de datos, placeholder del buscador, ayuda de «Texto de cabecera» y «Lote», términos conformes / excluidas) y con el especialista en SAP el texto de anulación (EH-21).
 4. Actas del especialista en SAP y del especialista en HCI → v1.3 y v1.4.
-5. Repetir la autoprueba H1 con los datos de la PUCP y regenerar `historial_git.txt` y `etiquetas.txt` antes de entregar.
+5. Regenerar `historial_git.txt` y `etiquetas.txt` si hay nuevas versiones (v1.3, v1.4).
