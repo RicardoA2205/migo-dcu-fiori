@@ -90,6 +90,12 @@ sap.ui.define([
                 processor: oModelo
             }));
         },
+        // Quita los mensajes de un campo con ese título (validación al escribir, EH-10)
+        quitarMensajes(sTarget, sTitulo) {
+            const aQuitar = Messaging.getMessageModel().getData()
+                .filter((m) => m.getTargets().includes(sTarget) && m.getMessage() === sTitulo);
+            if (aQuitar.length) { Messaging.removeMessages(aQuitar); }
+        },
         async abrirMensajes(oBoton) {
             if (!this._pMensajes) {
                 this._pMensajes = this.loadFragment({ name: "pe.pucp.tesis.migodcu.view.fragment.Mensajes" });

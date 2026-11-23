@@ -79,6 +79,19 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
             }
         },
 
+        // ---------- cantidad mayor a la pendiente: aviso al escribir (EH-10) ----------
+        onCantidadCambio(oEvent) {
+            const oCtx = oEvent.getSource().getBindingContext("reg");
+            const p = oCtx.getObject();
+            const sTarget = oCtx.getPath() + "/cantidadRecibida";
+            const sTitulo = this.getText("errCantidadMayor", [p.pos]);
+            this.quitarMensajes(sTarget, sTitulo);
+            if (Number(oEvent.getParameter("value")) > p.cantidadPendiente) {
+                this.agregarError(this.getModel("reg"), sTarget, sTitulo,
+                    this.getText("errCantidadMayorDesc", [p.pos, p.cantidadPendiente, p.unidad]));
+            }
+        },
+
         // ---------- verificación (HU-05, HU-06, HU-13) ----------
         _validar() {
             const oReg = this.getModel("reg");
