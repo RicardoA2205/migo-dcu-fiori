@@ -1,6 +1,8 @@
-82e4676 (HEAD -> main) Evidencias: enlace de GitHub Pages, recorrido de los dos flujos publicados y capturas actualizadas
+4db7740 (HEAD -> main, tag: v1.2) v1.2: complementos de EH-05, EH-08, EH-18, EH-19 y EH-22 y publicación en GitHub Pages
+fc38ab0 (origin/main) Evidencias: historial de git y etiquetas actualizados
+82e4676 Evidencias: enlace de GitHub Pages, recorrido de los dos flujos publicados y capturas actualizadas
 1d340ec EH-05 (corrección): la lista de mensajes espera a que el botón Mensajes esté dibujado
-0f061bd (origin/main) Evidencias: EH-05, EH-08, EH-18, EH-19 y EH-22 con las Tablas K1 y L3; capturas y docs/ actualizados
+0f061bd Evidencias: EH-05, EH-08, EH-18, EH-19 y EH-22 con las Tablas K1 y L3; capturas y docs/ actualizados
 d903414 EH-22 (complemento): ayuda contextual en «Texto de cabecera» y «Lote»
 ef76807 EH-18 (complemento): el lote se marca como obligatorio cuando corresponde
 4d11dda EH-19: los mensajes de stock identifican el componente con los mismos datos de la tabla
