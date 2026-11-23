@@ -1,0 +1,33 @@
+d8774c1 (HEAD -> main) Evidencias: script de capturas a 1440x900 (Playwright) y capturas preliminares con datos de ejemplo
+d62369b Publicación en GitHub Pages: scripts/pages.js, script pages y carpeta docs/ (Anexo A.22)
+2de97de (tag: v1.1) v1.1: flujo de salida por producción completo
+c7febb4 EH-16: tabla de la 261 sin cortes a 1440 px con densidad compacta
+d5da577 EH-17: en la 261, Centro va antes que Almacén de origen (columnas y celdas), como en la 101
+7378117 EH-13 (P261-04): título con el número de posiciones y sticky ColumnHeaders en la tabla del resumen
+fbc640b EH-04 (261): aviso de pérdida de datos al cancelar el registro de la salida si hubo cambios
+94c3b1e EH-02 (P261-02 / P261-04): «Paso 2 de 3» en el subHeader del registro y «Paso 3 de 3» en el resumen
+b2c21ec P261-02 a P261-04: registro de la salida, stock insuficiente, no planificado y resumen (Anexo A.17–A.21)
+d18f24a EH-03 (P261-01): botón Cancelar en el pie que vuelve al Inicio
+ab01495 EH-02 (P261-01): «Paso 1 de 3 · Orden de producción» en el subHeader
+bf8044c P261-01 / P261-01-E: orden de producción (Anexo A.15–A.16) con botón de ayuda
+395866b EH-21: cómo se anula un documento contabilizado (aviso del resumen y pantalla de resultado)
+933be53 (tag: v1.0) v1.0: flujo de entrada por compras completo
+55f2f21 P101-04 / P261-05: pantalla de resultado (Anexo A.13–A.14) con botón de ayuda
+3538a77 EH-14: plural en el aviso del resumen («en los almacenes ALM1, ALM2»)
+1b68796 EH-13 (P101-03): título con el número de posiciones y sticky ColumnHeaders en la tabla del resumen
+96c775a EH-12 (2/2): buscador en la barra de la tabla de posiciones (filtra por pos., material y descripción)
+8ffafe1 EH-11: el mensaje de cantidad mayor dice qué hacer («Ingrese como máximo {1} {2}.»)
+fbe615c EH-10: aviso al escribir una cantidad mayor a la pendiente (liveChange + Messaging)
+60a12f9 EH-07: una sola casilla por fila (estado Conforme con ObjectStatus)
+a54e802 EH-04: aviso de pérdida de datos (MessageBox) al cancelar el registro de la entrada si hubo cambios
+7b2b834 EH-02 (P101-02 / P101-03): «Paso 2 de 3» en el subHeader del registro y «Paso 3 de 3» en el resumen
+da0376d EH-05: botón Mensajes con ícono message-error y contador (fragmento BotonMensajes, patrón MessagePopover)
+04862a8 P101-02 / P101-03: registro de la entrada y resumen (Anexo A.9–A.12) con botón de ayuda
+33d9799 EH-03 (P101-01): botón Cancelar en el pie que vuelve al Inicio
+93e1933 EH-02 (P101-01): «Paso 1 de 3 · Orden de compra» en el subHeader (OverflowToolbar design=Info)
+8dacb7e P101-01 / P101-01-E: orden de compra (Anexo A.7–A.8) con botón de ayuda
+c96d03d EH-22: botón de ayuda (sys-help) en la cabecera que abre un Popover con la ayuda de la pantalla
+19b10f3 EH-12 (1/2): densidad compacta en escritorio (getContentDensityClass del Walkthrough)
+3b338ce Base: manifest, i18n, datos de prueba de ejemplo, BaseController, mensajes y P00 (Anexo A.1–A.6)
+5a170d6 (tag: v0.1) v0.1: historial de versiones (CHANGELOG.md)
+9d33da6 Proyecto base generado con SAP Fiori tools (plantilla Basic)
