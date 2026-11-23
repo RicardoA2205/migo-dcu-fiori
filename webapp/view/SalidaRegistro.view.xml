@@ -53,7 +53,7 @@
                 <Column><Text text="{i18n>colStock}"/></Column>
                 <Column><Text text="{i18n>colCentro}"/></Column>
                 <Column width="7rem"><Text text="{i18n>colAlmacenOrigen}"/></Column>
-                <Column width="8rem"><Text text="{i18n>colLote}"/></Column>
+                <Column width="8rem"><Label text="{i18n>colLote}" required="true"/></Column>
                 <Column width="6rem" hAlign="Center"><Text text="{i18n>colConforme}"/></Column>
                 <Column visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
             </columns>
@@ -73,7 +73,7 @@
                         <core:Icon src="sap-icon://locked" tooltip="{i18n>ttCentro}" class="sapUiTinyMarginBegin"/>
                     </HBox>
                     <Input value="{reg>almacen}" valueLiveUpdate="true" change=".onCambioFila"/>
-                    <Input value="{reg>lote}" enabled="{reg>manejaLote}" change=".onCambioFila"/>
+                    <Input value="{reg>lote}" enabled="{reg>manejaLote}" required="{reg>manejaLote}" change=".onCambioFila"/>
                     <CheckBox selected="{reg>conforme}"/>
                     <Text text="{reg>tipoStock}"/>
                 </ColumnListItem>
