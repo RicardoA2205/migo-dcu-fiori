@@ -4,7 +4,9 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
     return BaseController.extend("pe.pucp.tesis.migodcu.controller.SalidaRegistro", {
 
         onInit() {
-            this.getView().setModel(new JSONModel(), "reg");
+            const oReg = new JSONModel();
+            this.getView().setModel(oReg, "reg");
+            this.vigilarCambios(oReg);                       // EH-04
             this.prepararMensajes();
             this.getRouter().getRoute("salidaRegistro").attachPatternMatched(this._alEntrar, this);
         },
@@ -29,6 +31,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 textos: { tituloOrden: this.getText("tituloOrdenProduccion", [oOrden.numero]) }
             });
             this._actualizarTitulo();
+            this.reiniciarCambios();
         },
 
         // Arma una fila de la tabla con su stock disponible y faltante (HU-10)
@@ -95,6 +98,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
             oReg.setProperty("/posiciones", aPos.concat([this._nuevaFila(nPos, sMat, 0, Number(n.cantidad) || 0,
                 oReg.getProperty("/orden/centro"), (n.almacen || "").trim(), "", true)]));
             this._actualizarTitulo();
+            this.marcarModificado();
             this.byId("dlgNoPlanificado").close();
         },
 
@@ -177,6 +181,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
             this._actualizarFila(a.fila, a.op1
                 ? { entregaParcial: true, cantidadEntregar: String(p.stock) }   // entregar lo disponible
                 : { conforme: false });                                          // excluir el componente
+            this.marcarModificado();
             this.byId("dlgStock").close();
             this._validar();
         },
@@ -228,12 +233,16 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
             });
             this.byId("dlgResumenSalida").close();
             this.limpiarMensajes();
+            this.reiniciarCambios();
             this.getRouter().navTo("resultado", { flujo: "salida", documento: String(nDoc) }); // P261-05
         },
 
+        // EH-04: si hay cambios, avisa que se perderán y a qué pantalla vuelve
         onCancelar() {
-            this.limpiarMensajes();
-            this.getRouter().navTo("salidaOrden");
+            this.salirConAviso(this.getText("lblOrdenProduccion"), () => {
+                this.limpiarMensajes();
+                this.getRouter().navTo("salidaOrden");
+            });
         }
     });
 });
