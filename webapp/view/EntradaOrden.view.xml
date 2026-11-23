@@ -30,6 +30,7 @@
         <footer>
             <OverflowToolbar>
                 <ToolbarSpacer/>
+                <Button id="btnCancelarEntradaOrden" text="{i18n>btnCancelar}" press=".onVolverInicio"/>
                 <Button id="btnContinuarEntrada" text="{i18n>btnContinuar}" type="Emphasized"
                     enabled="{= !!${vista>/orden} }" press=".onContinuar"/>
             </OverflowToolbar>
