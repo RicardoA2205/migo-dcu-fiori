@@ -204,6 +204,7 @@ sap.ui.define([
                 flujo: "entrada",
                 titulo: this.getText("entradaRegistrada"),
                 documento: String(nDoc),
+                anio: d.cabecera.fechaContabilizacion.slice(0, 4),
                 detalle: this.getText("detalleEntrada", [d.cabecera.fechaContabilizacion.slice(0, 4), d.orden.numero,
                     aReg.length, this.fechaCorta(d.cabecera.fechaContabilizacion)]),
                 textoOtra: this.getText("btnOtraEntrada")

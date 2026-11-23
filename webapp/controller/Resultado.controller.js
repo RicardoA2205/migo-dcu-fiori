@@ -7,7 +7,9 @@ sap.ui.define(["./BaseController", "sap/m/MessageToast"], (BaseController, Messa
         _alEntrar(oEvent) {
             const oRes = this.getOwnerComponent().getModel("resultado");
             if (!oRes.getProperty("/documento")) { this.getRouter().navTo("inicio", {}, true); return; }
-            oRes.setProperty("/textoDocumento", this.getText("documentoMaterial", [oEvent.getParameter("arguments").documento]));
+            const sDoc = oEvent.getParameter("arguments").documento;
+            oRes.setProperty("/textoDocumento", this.getText("documentoMaterial", [sDoc]));
+            oRes.setProperty("/textoAnulacion", this.getText("anulacionDocumento", [sDoc, oRes.getProperty("/anio")]));  // EH-21
         },
         onCopiar() {
             const sDoc = this.getOwnerComponent().getModel("resultado").getProperty("/documento");

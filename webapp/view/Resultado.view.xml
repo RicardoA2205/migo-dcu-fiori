@@ -12,6 +12,8 @@
                 <Link text="{i18n>copiarNumero}" press=".onCopiar" class="sapUiSmallMarginBegin"/>
             </HBox>
             <Text text="{resultado>/detalle}" class="sapUiSmallMarginTop"/>
+            <MessageStrip id="msAnulacion" type="Information" showIcon="true" text="{resultado>/textoAnulacion}"
+                class="sapUiSmallMarginTop" width="40rem"/>
             <HBox class="sapUiMediumMarginTop">
                 <Button text="{resultado>/textoOtra}" type="Emphasized" press=".onOtra"/>
                 <Button text="{i18n>btnVolverInicio}" press=".onVolverInicio" class="sapUiSmallMarginBegin"/>
