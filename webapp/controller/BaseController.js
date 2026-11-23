@@ -5,8 +5,9 @@ sap.ui.define([
     "sap/ui/core/message/Message",
     "sap/ui/core/message/MessageType",
     "sap/ui/core/Element",
-    "sap/ui/core/format/DateFormat"
-], (Controller, UIComponent, Messaging, Message, MessageType, Element, DateFormat) => {
+    "sap/ui/core/format/DateFormat",
+    "sap/m/MessageBox"
+], (Controller, UIComponent, Messaging, Message, MessageType, Element, DateFormat, MessageBox) => {
     "use strict";
 
     const oFechaCorta = DateFormat.getDateInstance({ pattern: "dd/MM/yyyy" });
@@ -114,6 +115,32 @@ sap.ui.define([
         },
 
         onVerAlternativasMensaje() { /* solo se usa en la salida por producción */ },
+
+        // ---------- aviso de pérdida de datos al cancelar (EH-04) ----------
+        // propertyChange solo se dispara cuando el usuario cambia un valor en un control (binding de dos vías)
+        vigilarCambios(oModelo) {
+            this._bModificado = false;
+            oModelo.attachPropertyChange(() => { this._bModificado = true; });
+        },
+        marcarModificado() { this._bModificado = true; },
+        reiniciarCambios() { this._bModificado = false; },
+        salirConAviso(sDestino, fnSalir) {
+            if (!this._bModificado) { fnSalir(); return; }
+            const sDescartar = this.getText("btnDescartarVolver");
+            const sCancelar = this.getText("btnCancelar");
+            MessageBox.warning(this.getText("perdidaDatos", [sDestino]), {
+                title: this.getText("perdidaDatosTitulo"),
+                actions: [sDescartar, sCancelar],
+                emphasizedAction: sDescartar,
+                initialFocus: sCancelar,
+                onClose: (sAccion) => {
+                    if (sAccion === sDescartar) {
+                        this.reiniciarCambios();
+                        fnSalir();
+                    }
+                }
+            });
+        },
 
         // ---------- ayuda de la pantalla (EH-22) ----------
         async onAyuda(oEvent) {

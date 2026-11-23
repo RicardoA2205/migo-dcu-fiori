@@ -4,7 +4,9 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
     return BaseController.extend("pe.pucp.tesis.migodcu.controller.EntradaRegistro", {
 
         onInit() {
-            this.getView().setModel(new JSONModel(), "reg");
+            const oReg = new JSONModel();
+            this.getView().setModel(oReg, "reg");
+            this.vigilarCambios(oReg);                       // EH-04
             this.prepararMensajes();
             this.getRouter().getRoute("entradaRegistro").attachPatternMatched(this._alEntrar, this);
         },
@@ -34,6 +36,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 }
             });
             this.byId("tblPosiciones").removeSelections(true);
+            this.reiniciarCambios();
         },
 
         // ---------- acciones sobre varias posiciones (HU-12) ----------
@@ -46,6 +49,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
         _marcarSeleccion(bConforme) {
             const oTabla = this.byId("tblPosiciones");
             oTabla.getSelectedContexts().forEach((oCtx) => oCtx.getModel().setProperty(oCtx.getPath() + "/conforme", bConforme));
+            this.marcarModificado();
             oTabla.removeSelections(true);
             this.onSeleccion();
         },
@@ -168,12 +172,16 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
             });
             this.byId("dlgResumenEntrada").close();
             this.limpiarMensajes();
+            this.reiniciarCambios();
             this.getRouter().navTo("resultado", { flujo: "entrada", documento: String(nDoc) }); // P101-04
         },
 
+        // EH-04: si hay cambios, avisa que se perderán y a qué pantalla vuelve
         onCancelar() {
-            this.limpiarMensajes();
-            this.getRouter().navTo("entradaOrden");
+            this.salirConAviso(this.getText("lblOrdenCompra"), () => {
+                this.limpiarMensajes();
+                this.getRouter().navTo("entradaOrden");
+            });
         }
     });
 });
