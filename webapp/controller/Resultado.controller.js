@@ -1,0 +1,22 @@
+sap.ui.define(["./BaseController", "sap/m/MessageToast"], (BaseController, MessageToast) => {
+    "use strict";
+    return BaseController.extend("pe.pucp.tesis.migodcu.controller.Resultado", {
+        onInit() {
+            this.getRouter().getRoute("resultado").attachPatternMatched(this._alEntrar, this);
+        },
+        _alEntrar(oEvent) {
+            const oRes = this.getOwnerComponent().getModel("resultado");
+            if (!oRes.getProperty("/documento")) { this.getRouter().navTo("inicio", {}, true); return; }
+            oRes.setProperty("/textoDocumento", this.getText("documentoMaterial", [oEvent.getParameter("arguments").documento]));
+        },
+        onCopiar() {
+            const sDoc = this.getOwnerComponent().getModel("resultado").getProperty("/documento");
+            // eslint-disable-next-line @sap-ux/fiori-tools/sap-no-navigator -- UI5 no tiene API propia para el portapapeles
+            navigator.clipboard.writeText(sDoc).then(() => MessageToast.show(this.getText("numeroCopiado")));
+        },
+        onOtra() {
+            const sFlujo = this.getOwnerComponent().getModel("resultado").getProperty("/flujo");
+            this.getRouter().navTo(sFlujo === "salida" ? "salidaOrden" : "entradaOrden");
+        }
+    });
+});
