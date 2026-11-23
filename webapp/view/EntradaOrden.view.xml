@@ -6,7 +6,11 @@
         </headerContent>
         <subHeader>
             <OverflowToolbar design="Info">
-                <Text text="{i18n>contextoEntrada}"/>
+                <Title id="txtPasoEntrada1" text="{i18n>pasoEntrada1}" level="H2"/>
+                <ToolbarSeparator/>
+                <Text text="{i18n>contextoEntrada}">
+                    <layoutData><OverflowToolbarLayoutData shrinkable="true"/></layoutData>
+                </Text>
             </OverflowToolbar>
         </subHeader>
         <VBox class="sapUiMediumMargin" width="100%" maxWidth="60rem">
