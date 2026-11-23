@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Popover id="popAyuda" title="{i18n>ayudaTitulo}" placement="Bottom" contentWidth="26rem" class="sapUiContentPadding">
+        <Text id="txtAyuda"/>
+    </Popover>
+</core:FragmentDefinition>

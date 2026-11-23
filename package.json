@@ -19,6 +19,7 @@
     "start": "fiori run --open \"/test/flpSandbox.html?sap-ui-xx-viewCache=false#pepucptesismigodcu-display\"",
     "start-local": "fiori run --config ./ui5-local.yaml --open \"/test/flpSandbox.html?sap-ui-xx-viewCache=false#pepucptesismigodcu-display\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+    "pages": "npm run build && node scripts/pages.js",
     "lint": "eslint ./",
     "deploy": "fiori verify",
     "deploy-config": "fiori add deploy-config",

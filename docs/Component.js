@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","pe/pucp/tesis/migodcu/model/models"],(e,t,i)=>{"use strict";return e.extend("pe.pucp.tesis.migodcu.Component",{metadata:{manifest:"json",interfaces:["sap.ui.core.IAsyncContentCreation"]},init(){e.prototype.init.apply(this,arguments);this.setModel(i.createDeviceModel(),"device");this.getRouter().initialize()},getContentDensityClass(){return t.support.touch?"sapUiSizeCozy":"sapUiSizeCompact"}})});
+//# sourceMappingURL=Component.js.map

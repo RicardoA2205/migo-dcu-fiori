@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <ResponsivePopover id="rpColumnas" title="{i18n>ttColumnas}" placement="Bottom">
+        <VBox class="sapUiSmallMargin">
+            <CheckBox text="{i18n>colTipoStock}" selected="{reg>/columnas/tipoStock}"/>
+        </VBox>
+    </ResponsivePopover>
+</core:FragmentDefinition>

@@ -1,0 +1,39 @@
+<mvc:View controllerName="pe.pucp.tesis.migodcu.controller.EntradaOrden"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page id="pageEntradaOrden" title="{i18n>tituloEntrada}" showNavButton="true" navButtonPress=".onVolverInicio">
+        <headerContent>
+            <Button id="btnAyudaEntradaOrden" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title id="txtPasoEntrada1" text="{i18n>pasoEntrada1}" level="H2"/>
+                <ToolbarSeparator/>
+                <Text text="{i18n>contextoEntrada}">
+                    <layoutData><OverflowToolbarLayoutData shrinkable="true"/></layoutData>
+                </Text>
+            </OverflowToolbar>
+        </subHeader>
+        <VBox class="sapUiMediumMargin" width="100%" maxWidth="60rem">
+            <Label text="{i18n>lblOrdenCompra}" labelFor="inpOrdenCompra" required="true"/>
+            <HBox>
+                <Input id="inpOrdenCompra" width="22rem" value="{vista>/numero}" valueLiveUpdate="true"
+                    valueState="{vista>/estado}" valueStateText="{vista>/estadoTexto}"
+                    submit=".onBuscar" liveChange=".onCambioNumero"/>
+                <Button text="{i18n>btnBuscar}" press=".onBuscar" class="sapUiTinyMarginBegin"/>
+            </HBox>
+            <Panel headerText="{i18n>datosOrden}" visible="{= !!${vista>/orden} }" class="sapUiSmallMarginTop">
+                <ObjectAttribute title="{i18n>lblProveedor}" text="{vista>/orden/proveedor}"/>
+                <ObjectAttribute title="{i18n>lblFechaOrden}" text="{vista>/orden/fecha}"/>
+                <ObjectAttribute title="{i18n>lblPosPendientes}" text="{vista>/orden/pendientes}"/>
+            </Panel>
+        </VBox>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button id="btnCancelarEntradaOrden" text="{i18n>btnCancelar}" press=".onVolverInicio"/>
+                <Button id="btnContinuarEntrada" text="{i18n>btnContinuar}" type="Emphasized"
+                    enabled="{= !!${vista>/orden} }" press=".onContinuar"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <MessagePopover id="mpMensajes" items="{message>/}" activeTitlePress=".onIrAlCampo"
+        itemSelect=".onMensajeSeleccionado">
+        <MessageItem type="{message>type}" title="{message>message}" description="{message>description}"
+            activeTitle="{= ${message>controlIds}.length > 0 }">
+            <link>
+                <Link text="{i18n>lnkVerAlternativas}" visible="{= ${message>code} === 'STOCK' }" press=".onVerAlternativasMensaje"/>
+            </link>
+        </MessageItem>
+    </MessagePopover>
+</core:FragmentDefinition>

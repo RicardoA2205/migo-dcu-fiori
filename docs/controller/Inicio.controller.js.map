@@ -1,0 +1,1 @@
+{"version":3,"file":"Inicio.controller.js","names":["sap","ui","define","BaseController","extend","onIrEntrada","this","getRouter","navTo","onIrSalida"],"sources":["Inicio-dbg.controller.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,CAAC,oBAAsBC,IACjC,aACA,OAAOA,EAAeC,OAAO,0CAA2C,CACpE,WAAAC,GAAgBC,KAAKC,YAAYC,MAAM,eAAiB,EACxD,UAAAC,GAAeH,KAAKC,YAAYC,MAAM,cAAgB","ignoreList":[]}

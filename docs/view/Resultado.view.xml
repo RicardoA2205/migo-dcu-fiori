@@ -1,0 +1,23 @@
+<mvc:View controllerName="pe.pucp.tesis.migodcu.controller.Resultado"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="pageResultado" title="{= ${resultado>/flujo} === 'salida' ? ${i18n>tituloSalida} : ${i18n>tituloEntrada} }">
+        <headerContent>
+            <Button id="btnAyudaResultado" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
+        <VBox alignItems="Center" class="sapUiLargeMarginTop">
+            <core:Icon src="sap-icon://sys-enter-2" color="Positive" size="2rem"/>
+            <Title text="{resultado>/titulo}" titleStyle="H2" class="sapUiSmallMarginTop"/>
+            <HBox alignItems="Center" class="sapUiSmallMarginTop">
+                <Title id="txtDocumento" text="{resultado>/textoDocumento}" titleStyle="H1"/>
+                <Link text="{i18n>copiarNumero}" press=".onCopiar" class="sapUiSmallMarginBegin"/>
+            </HBox>
+            <Text text="{resultado>/detalle}" class="sapUiSmallMarginTop"/>
+            <MessageStrip id="msAnulacion" type="Information" showIcon="true" text="{resultado>/textoAnulacion}"
+                class="sapUiSmallMarginTop" width="40rem"/>
+            <HBox class="sapUiMediumMarginTop">
+                <Button text="{resultado>/textoOtra}" type="Emphasized" press=".onOtra"/>
+                <Button text="{i18n>btnVolverInicio}" press=".onVolverInicio" class="sapUiSmallMarginBegin"/>
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>

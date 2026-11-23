@@ -1,0 +1,44 @@
+<mvc:View controllerName="pe.pucp.tesis.migodcu.controller.SalidaOrden"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page id="pageSalidaOrden" title="{i18n>tituloSalida}" showNavButton="true" navButtonPress=".onVolverInicio">
+        <headerContent>
+            <Button id="btnAyudaSalidaOrden" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title id="txtPasoSalida1" text="{i18n>pasoSalida1}" level="H2"/>
+                <ToolbarSeparator/>
+                <Text text="{i18n>contextoSalida}">
+                    <layoutData><OverflowToolbarLayoutData shrinkable="true"/></layoutData>
+                </Text>
+            </OverflowToolbar>
+        </subHeader>
+        <VBox class="sapUiMediumMargin" width="100%" maxWidth="60rem">
+            <Label text="{i18n>lblOrdenProduccion}" labelFor="inpOrdenProduccion" required="true"/>
+            <HBox>
+                <Input id="inpOrdenProduccion" width="22rem" value="{vista>/numero}" valueLiveUpdate="true"
+                    valueState="{vista>/estado}" valueStateText="{vista>/estadoTexto}"
+                    submit=".onBuscar" liveChange=".onCambioNumero"/>
+                <Button text="{i18n>btnBuscar}" press=".onBuscar" class="sapUiTinyMarginBegin"/>
+            </HBox>
+            <Panel headerText="{i18n>datosOrden}" visible="{= !!${vista>/orden} }" class="sapUiSmallMarginTop">
+                <ObjectStatus text="{= ${vista>/orden/liberada} ? ${i18n>estadoLiberada} : ${i18n>estadoNoLiberada} }"
+                    state="{= ${vista>/orden/liberada} ? 'Success' : 'Error' }"/>
+                <ObjectAttribute title="{i18n>lblMaterialFabricar}" text="{vista>/orden/materialTexto}"/>
+                <ObjectAttribute title="{i18n>lblCantidadFabricar}" text="{vista>/orden/cantidadTexto}"/>
+                <ObjectAttribute title="{i18n>lblFechaInicio}" text="{vista>/orden/fechaInicio}"/>
+                <ObjectAttribute title="{i18n>lblComponentes}" text="{vista>/orden/componentesTexto}"/>
+            </Panel>
+            <MessageStrip id="msNoLiberada" type="Error" showIcon="true" class="sapUiSmallMarginTop"
+                visible="{= !!${vista>/orden} &amp;&amp; !${vista>/orden/liberada} }" text="{vista>/orden/aviso}"/>
+        </VBox>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button id="btnCancelarSalidaOrden" text="{i18n>btnCancelar}" press=".onVolverInicio"/>
+                <Button id="btnContinuarSalida" text="{i18n>btnContinuar}" type="Emphasized"
+                    enabled="{= !!${vista>/orden} &amp;&amp; ${vista>/orden/liberada} }" press=".onContinuar"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,106 @@
+<mvc:View controllerName="pe.pucp.tesis.migodcu.controller.EntradaRegistro"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="pageEntradaRegistro" title="{i18n>tituloEntrada}" showNavButton="true" navButtonPress=".onCancelar">
+        <headerContent>
+            <Button id="btnAyudaEntradaRegistro" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title id="txtPasoEntrada2" text="{i18n>pasoEntrada2}" level="H2"/>
+            </OverflowToolbar>
+        </subHeader>
+        <Panel headerText="{reg>/textos/tituloOrden}" class="sapUiResponsiveMargin" width="auto">
+            <ObjectAttribute title="{i18n>lblProveedor}" text="{reg>/orden/proveedor}"/>
+            <ObjectAttribute title="{i18n>lblFechaOrden}" text="{reg>/orden/fecha}"/>
+            <Text text="{i18n>claseMov101}"/>
+        </Panel>
+
+        <Panel headerText="{i18n>datosRecepcion}" class="sapUiResponsiveMargin" width="auto">
+            <FlexBox wrap="Wrap" alignItems="End">
+                <VBox class="sapUiSmallMarginEnd" width="14rem">
+                    <Label text="{i18n>lblFechaDoc}" labelFor="dpFechaDoc"/>
+                    <DatePicker id="dpFechaDoc" value="{reg>/cabecera/fechaDocumento}"
+                        valueFormat="yyyy-MM-dd" displayFormat="dd/MM/yyyy"/>
+                </VBox>
+                <VBox class="sapUiSmallMarginEnd" width="14rem">
+                    <Label text="{i18n>lblFechaCont}" labelFor="dpFechaCont"/>
+                    <DatePicker id="dpFechaCont" value="{reg>/cabecera/fechaContabilizacion}"
+                        valueFormat="yyyy-MM-dd" displayFormat="dd/MM/yyyy"/>
+                </VBox>
+                <VBox class="sapUiSmallMarginEnd" width="16rem">
+                    <Label text="{i18n>lblGuia}" labelFor="inpGuia" required="true"/>
+                    <Input id="inpGuia" value="{reg>/cabecera/guiaRemision}" valueLiveUpdate="true"
+                        placeholder="{datos>/config/ejemploGuia}" liveChange=".onGuiaCambio"/>
+                </VBox>
+                <VBox width="16rem">
+                    <Label text="{i18n>lblTipoVale}" labelFor="selTipoVale"/>
+                    <HBox alignItems="Center">
+                        <Select id="selTipoVale" width="13rem" selectedKey="{reg>/cabecera/tipoVale}"
+                            items="{datos>/config/tiposVale}">
+                            <core:Item key="{datos>clave}" text="{datos>texto}"/>
+                        </Select>
+                        <core:Icon src="sap-icon://message-information" tooltip="{i18n>ttTipoVale}" class="sapUiTinyMarginBegin"/>
+                    </HBox>
+                </VBox>
+            </FlexBox>
+        </Panel>
+
+        <Table id="tblPosiciones" class="sapUiResponsiveMargin" width="auto" items="{reg>/posiciones}"
+            mode="MultiSelect" selectionChange=".onSeleccion" sticky="HeaderToolbar,ColumnHeaders">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="{reg>/textos/tituloPosiciones}" level="H2"/>
+                    <SearchField id="sfPosiciones" width="18rem" placeholder="{i18n>buscarPosiciones}"
+                        liveChange=".onBuscarPosicion" search=".onBuscarPosicion" class="sapUiSmallMarginBegin"/>
+                    <ToolbarSpacer/>
+                    <Text text="{reg>/textos/seleccionadas}"/>
+                    <Button text="{i18n>btnMarcarConforme}" enabled="{= ${reg>/seleccionadas} > 0 }" press=".onMarcarConforme"/>
+                    <Button text="{i18n>btnExcluir}" enabled="{= ${reg>/seleccionadas} > 0 }" press=".onExcluir"/>
+                    <Button icon="sap-icon://action-settings" tooltip="{i18n>ttColumnas}" press=".onColumnas"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
+                <Column><Text text="{i18n>colMaterial}"/></Column>
+                <Column><Text text="{i18n>colDescripcion}"/></Column>
+                <Column hAlign="End"><Text text="{i18n>colPendiente}"/></Column>
+                <Column width="8rem"><Text text="{i18n>colRecibida}"/></Column>
+                <Column><Text text="{i18n>colUnidad}"/></Column>
+                <Column><Text text="{i18n>colCentro}"/></Column>
+                <Column width="7rem"><Text text="{i18n>colAlmacen}"/></Column>
+                <Column hAlign="Center"><Text text="{i18n>colConforme}"/></Column>
+                <Column visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <Text text="{reg>pos}"/>
+                    <Text text="{reg>material}"/>
+                    <Text text="{reg>descripcion}"/>
+                    <ObjectNumber number="{reg>cantidadPendiente}"/>
+                    <Input value="{reg>cantidadRecibida}" type="Number" textAlign="End" valueLiveUpdate="true"
+                        liveChange=".onCantidadCambio"/>
+                    <Text text="{reg>unidad}"/>
+                    <HBox alignItems="Center">
+                        <Text text="{reg>centro}"/>
+                        <core:Icon src="sap-icon://locked" tooltip="{i18n>ttCentro}" class="sapUiTinyMarginBegin"/>
+                    </HBox>
+                    <Input value="{reg>almacen}" valueLiveUpdate="true"/>
+                    <ObjectStatus text="{= ${reg>marca} === 'conforme' ? ${i18n>estadoConforme} : (${reg>marca} === 'excluida' ? ${i18n>estadoExcluida} : '') }"
+                        state="{= ${reg>marca} === 'conforme' ? 'Success' : 'None' }"
+                        icon="{= ${reg>marca} === 'conforme' ? 'sap-icon://sys-enter-2' : (${reg>marca} === 'excluida' ? 'sap-icon://sys-cancel-2' : '') }"/>
+                    <Text text="{reg>tipoStock}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <footer>
+            <OverflowToolbar>
+                <core:Fragment fragmentName="pe.pucp.tesis.migodcu.view.fragment.BotonMensajes" type="XML"/>
+                <ToolbarSpacer/>
+                <Button text="{i18n>btnCancelar}" press=".onCancelar"/>
+                <Button text="{i18n>btnVerificar}" press=".onVerificar"/>
+                <Button text="{i18n>btnContabilizar}" type="Emphasized" press=".onContabilizar"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="dlgStock" title="{i18n>stockTitulo}" icon="sap-icon://alert" state="Warning" contentWidth="40rem">
+        <VBox class="sapUiSmallMargin">
+            <Text text="{reg>/alternativa/linea}"/>
+            <HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+                <VBox><Label text="{i18n>stockNecesario}"/><Title text="{reg>/alternativa/necesario}" titleStyle="H2"/></VBox>
+                <VBox><Label text="{reg>/alternativa/lblDisponible}"/><Title text="{reg>/alternativa/disponible}" titleStyle="H2"/></VBox>
+                <VBox><Label text="{i18n>stockFaltanTit}"/><ObjectStatus text="{reg>/alternativa/faltan}" state="Warning" class="sapMObjectStatusLarge"/></VBox>
+            </HBox>
+            <Title text="{i18n>stockPregunta}" class="sapUiMediumMarginTop"/>
+            <RadioButton id="rbOpcion1" groupName="alternativa" text="{reg>/alternativa/opcion1}" selected="{reg>/alternativa/op1}"/>
+            <Text text="{reg>/alternativa/opcion1Desc}" class="sapUiLargeMarginBegin"/>
+            <RadioButton id="rbOpcion2" groupName="alternativa" text="{i18n>stockOpcion2}" selected="{reg>/alternativa/op2}" class="sapUiSmallMarginTop"/>
+            <Text text="{i18n>stockOpcion2Desc}" class="sapUiLargeMarginBegin"/>
+        </VBox>
+        <buttons>
+            <Button text="{i18n>btnCancelar}" type="Transparent" press=".onCancelarAlternativa"/>
+            <Button id="btnAplicarAlternativa" text="{i18n>btnAplicar}" type="Emphasized" press=".onAplicarAlternativa"
+                enabled="{= ${reg>/alternativa/op1} || ${reg>/alternativa/op2} }"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

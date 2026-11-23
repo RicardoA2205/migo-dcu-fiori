@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="dlgResumenSalida" title="{i18n>resumenTitulo}" contentWidth="50rem">
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title text="{i18n>pasoSalida3}" level="H2"/>
+            </OverflowToolbar>
+        </subHeader>
+        <VBox class="sapUiSmallMargin">
+            <Text text="{reg>/resumen/lineaOrden}"/>
+            <Text text="{i18n>claseMov261}" class="sapUiTinyMarginTop"/>
+            <Text text="{reg>/resumen/lineaFecha}" class="sapUiTinyMarginTop"/>
+            <Table items="{reg>/resumen/posiciones}" class="sapUiSmallMarginTop" sticky="HeaderToolbar,ColumnHeaders">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{reg>/resumen/tituloPosiciones}" level="H3"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
+                    <Column><Text text="{i18n>colMaterial}"/></Column>
+                    <Column><Text text="{i18n>colDescripcion}"/></Column>
+                    <Column hAlign="End"><Text text="{i18n>colCantidad}"/></Column>
+                    <Column><Text text="{i18n>colUnidad}"/></Column>
+                    <Column><Text text="{i18n>colAlmacenOrigen}"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <Text text="{reg>pos}"/>
+                        <Text text="{reg>material}"/>
+                        <Text text="{reg>descripcion}"/>
+                        <Text text="{reg>cantidadEntregar}"/>
+                        <Text text="{reg>unidad}"/>
+                        <Text text="{reg>almacen}"/>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <Title text="{reg>/resumen/aRegistrar}" class="sapUiSmallMarginTop"/>
+            <Text text="{reg>/resumen/parciales}" visible="{= !!${reg>/resumen/parciales} }"/>
+            <MessageStrip type="Warning" showIcon="true" text="{reg>/resumen/aviso}" class="sapUiSmallMarginTop"/>
+        </VBox>
+        <buttons>
+            <Button text="{i18n>btnVolverCorregir}" type="Transparent" press=".onVolverCorregir"/>
+            <Button id="btnConfirmarSalida" text="{i18n>btnConfirmar}" type="Emphasized" press=".onConfirmar"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>
