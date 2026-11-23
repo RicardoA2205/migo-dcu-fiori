@@ -4,7 +4,9 @@
         <MessageItem type="{message>type}" title="{message>message}" description="{message>description}"
             activeTitle="{= ${message>controlIds}.length > 0 }">
             <link>
-                <Link text="{i18n>lnkVerAlternativas}" visible="{= ${message>code} === 'STOCK' }" press=".onVerAlternativasMensaje"/>
+                <!-- Rótulos de la Tabla K1: «Ir al campo» / «Ir a la posición» (P101-02-E) y «Ver alternativas» (P261-02-E) -->
+                <Link text="{parts: ['message>code', 'message>controlIds'], formatter: '.textoLinkMensaje'}"
+                    visible="{= ${message>code} === 'STOCK' || ${message>controlIds}.length > 0 }" press=".onLinkMensaje"/>
             </link>
         </MessageItem>
     </MessagePopover>

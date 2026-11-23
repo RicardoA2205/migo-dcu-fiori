@@ -111,7 +111,21 @@ sap.ui.define([
             this._oMensajeActual = oCtx ? oCtx.getObject() : null;
         },
         onIrAlCampo(oEvent) {
-            const oMensaje = oEvent.getParameter("item").getBindingContext("message").getObject();
+            this._irAlControl(oEvent.getParameter("item").getBindingContext("message").getObject());
+        },
+        // Enlace del detalle del mensaje (EH-08, rótulos de la Tabla K1). No trae contexto: se usa el mensaje elegido
+        textoLinkMensaje(sCodigo, aControlIds) {
+            if (sCodigo === "STOCK") { return this.getText("lnkVerAlternativas"); }
+            const sId = (aControlIds || [])[0] || "";
+            return this.getText(sId.includes("--tbl") ? "lnkIrPosicion" : "lnkIrCampo");
+        },
+        onLinkMensaje() {
+            const oMensaje = this._oMensajeActual;
+            if (!oMensaje) { return; }
+            if (oMensaje.getCode() === "STOCK") { this.onVerAlternativasMensaje(); return; }
+            this._irAlControl(oMensaje);
+        },
+        _irAlControl(oMensaje) {
             const sId = oMensaje.getControlIds()[0];
             const oControl = sId && Element.getElementById(sId);
             if (oControl) {
