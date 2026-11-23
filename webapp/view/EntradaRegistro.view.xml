@@ -85,9 +85,7 @@
 
         <footer>
             <OverflowToolbar>
-                <Button id="btnMensajes" text="{= ${i18n>btnMensajes} + (${message>/}.length > 0 ? ' (' + ${message>/}.length + ')' : '') }"
-                    type="{= ${message>/}.length > 0 ? 'Negative' : 'Default' }" enabled="{= ${message>/}.length > 0 }"
-                    press=".onMensajes"/>
+                <core:Fragment fragmentName="pe.pucp.tesis.migodcu.view.fragment.BotonMensajes" type="XML"/>
                 <ToolbarSpacer/>
                 <Button text="{i18n>btnCancelar}" press=".onCancelar"/>
                 <Button text="{i18n>btnVerificar}" press=".onVerificar"/>
