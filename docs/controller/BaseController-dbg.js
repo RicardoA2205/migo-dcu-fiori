@@ -101,9 +101,19 @@ sap.ui.define([
                 this._pMensajes = this.loadFragment({ name: "pe.pucp.tesis.migodcu.view.fragment.Mensajes" });
             }
             const oPopover = await this._pMensajes;
-            this._oMensajeActual = null;
-            oPopover.navigateBack();
-            oPopover.openBy(oBoton || this.byId("btnMensajes"));
+            const oAncla = oBoton || this.byId("btnMensajes");
+            const fnAbrir = () => {
+                this._oMensajeActual = null;
+                oPopover.navigateBack();
+                oPopover.openBy(oAncla);
+            };
+            // El botón Mensajes solo se muestra cuando hay mensajes (EH-05): si aún no está dibujado, se abre al dibujarse
+            if (oAncla.getDomRef()) {
+                fnAbrir();
+            } else {
+                const oDelegado = { onAfterRendering: () => { oAncla.removeEventDelegate(oDelegado); fnAbrir(); } };
+                oAncla.addEventDelegate(oDelegado);
+            }
         },
         onMensajes(oEvent) { this.abrirMensajes(oEvent.getSource()); },
         onMensajeSeleccionado(oEvent) {

@@ -36,3 +36,7 @@ Recorrida el 22/11/2026 con `npm start` (launchpad de prueba de SAP Fiori, SAPUI
 | No planificado con material inexistente | Campo en rojo en el diálogo | `P261-02-E_No_planificado_material_inexistente.png` |
 
 También: Cancelar con y sin cambios (EH-04) en los dos flujos, búsqueda en 40 posiciones (EH-12), ayuda en las 6 vistas (EH-22).
+
+## Recorrido en GitHub Pages
+
+22/11/2026, https://ricardoa2205.github.io/migo-dcu-fiori/ con un navegador limpio (sin caché ni sesión), 1440×900: SAPUI5 1.136 desde el CDN de SAP, densidad compacta. Flujo 101 completo (P101-01-E → P101-01 → P101-02 → P101-03 → P101-04) y flujo 261 completo (P261-01-E con «Continuar» deshabilitado → P261-01 → P261-02-E → P261-03 → P261-04 → P261-05). El recorrido detectó que la lista de mensajes se abría antes de que apareciera el botón Mensajes; se corrigió (EH-05, corrección) y se volvió a probar en local. En consola apareció un 404; al recargar no se repitió con ningún recurso de la app, y el `favicon.ico` de la raíz del dominio responde 404 (no es parte de la app).

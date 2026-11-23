@@ -21,7 +21,7 @@
 | 1.1 | `v1.1` | Flujo de salida por producción (P261-01 a P261-05) |
 | 1.2 | — | Pendiente: datos reales de la PUCP en `datosPrueba.json` |
 
-Remoto configurado: `https://github.com/RicardoA2205/migo-dcu-fiori.git`. Aún no se ha hecho `git push`.
+Código en GitHub (rama `main` y etiquetas v0.1, v1.0 y v1.1) y app publicada en GitHub Pages.
 
 ## Correcciones EH
 
@@ -44,14 +44,13 @@ Los 23 cerrados. Con las Tablas K1 y L3 del Word se corrigieron EH-08 y EH-19 y 
 
 ## Enlaces
 
-- Repositorio de GitHub: https://github.com/RicardoA2205/migo-dcu-fiori (creado; falta el push).
-- GitHub Pages: https://ricardoa2205.github.io/migo-dcu-fiori/ (cuando se active).
+- Repositorio de GitHub: https://github.com/RicardoA2205/migo-dcu-fiori
+- GitHub Pages: https://ricardoa2205.github.io/migo-dcu-fiori/ (los dos flujos recorridos con un navegador limpio, a 1440×900; SAPUI5 1.136 desde el CDN de SAP).
 
 ## Lo que falta
 
-1. **Datos de la PUCP** (Ricardo): crear los documentos (ME21N, CO01 con una orden sin liberar, MIGO 561 o MMBE, MMRV), llenar `datos_prueba.xlsx`, copiarlos a `datosPrueba.json` → **v1.2**; luego `npm run capturas` y `npm run pages`.
-2. **GitHub**: `git push --follow-tags` y activar Pages (Settings → Pages → rama `main`, carpeta `/docs`). Recorrer los dos flujos en la URL publicada en una ventana privada.
-3. Capturas «antes» de cada EH (Figma, Anexo K) para ponerlas junto a las de «después».
-4. Validar con el especialista en HCI los textos nuevos (ayuda, aviso de pérdida de datos, placeholder del buscador, ayuda de «Texto de cabecera» y «Lote», términos conformes / excluidas) y con el especialista en SAP el texto de anulación (EH-21).
-5. Actas del especialista en SAP y del especialista en HCI → v1.3 y v1.4.
-6. Repetir la autoprueba H1 con los datos de la PUCP y regenerar `historial_git.txt` y `etiquetas.txt` antes de entregar.
+1. **Datos de la PUCP** (Ricardo): crear los documentos (ME21N, CO01 con una orden sin liberar, MIGO 561 o MMBE, MMRV), llenar `datos_prueba.xlsx`, copiarlos a `datosPrueba.json` → **v1.2**; luego `npm run capturas`, `npm run pages`, push y volver a recorrer la URL de Pages.
+2. Capturas «antes» de cada EH (Figma, Anexo K) para ponerlas junto a las de «después».
+3. Validar con el especialista en HCI los textos nuevos (ayuda, aviso de pérdida de datos, placeholder del buscador, ayuda de «Texto de cabecera» y «Lote», términos conformes / excluidas) y con el especialista en SAP el texto de anulación (EH-21).
+4. Actas del especialista en SAP y del especialista en HCI → v1.3 y v1.4.
+5. Repetir la autoprueba H1 con los datos de la PUCP y regenerar `historial_git.txt` y `etiquetas.txt` antes de entregar.
