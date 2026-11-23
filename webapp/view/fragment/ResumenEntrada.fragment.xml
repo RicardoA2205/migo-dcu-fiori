@@ -1,5 +1,10 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
     <Dialog id="dlgResumenEntrada" title="{i18n>resumenTitulo}" contentWidth="50rem">
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title text="{i18n>pasoEntrada3}" level="H2"/>
+            </OverflowToolbar>
+        </subHeader>
         <VBox class="sapUiSmallMargin">
             <Text text="{reg>/resumen/lineaOrden}"/>
             <Text text="{i18n>claseMov101}" class="sapUiTinyMarginTop"/>
