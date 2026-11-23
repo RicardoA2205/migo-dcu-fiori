@@ -28,7 +28,10 @@
                 </VBox>
                 <VBox width="24rem">
                     <Label text="{i18n>lblTextoCabecera}" labelFor="inpTextoCab"/>
-                    <Input id="inpTextoCab" value="{reg>/cabecera/textoCabecera}" maxLength="25"/>
+                    <HBox alignItems="Center">
+                        <Input id="inpTextoCab" value="{reg>/cabecera/textoCabecera}" maxLength="25" width="21rem"/>
+                        <core:Icon src="sap-icon://message-information" tooltip="{i18n>ttTextoCabecera}" class="sapUiTinyMarginBegin"/>
+                    </HBox>
                 </VBox>
             </FlexBox>
         </Panel>
@@ -53,7 +56,12 @@
                 <Column><Text text="{i18n>colStock}"/></Column>
                 <Column><Text text="{i18n>colCentro}"/></Column>
                 <Column width="7rem"><Text text="{i18n>colAlmacenOrigen}"/></Column>
-                <Column width="8rem"><Label text="{i18n>colLote}" required="true"/></Column>
+                <Column width="8rem">
+                    <HBox alignItems="Center">
+                        <Label text="{i18n>colLote}" required="true"/>
+                        <core:Icon src="sap-icon://message-information" tooltip="{i18n>ttLote}" class="sapUiTinyMarginBegin"/>
+                    </HBox>
+                </Column>
                 <Column width="6rem" hAlign="Center"><Text text="{i18n>colConforme}"/></Column>
                 <Column visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
             </columns>
