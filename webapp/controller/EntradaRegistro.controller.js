@@ -164,7 +164,8 @@ sap.ui.define([
             const oReg = this.getModel("reg");
             const d = oReg.getData();
             const aReg = d.posiciones.filter((p) => p.conforme);
-            const aAlm = [...new Set(aReg.map((p) => p.almacen))].join(", ");
+            const aAlmacenes = [...new Set(aReg.map((p) => p.almacen))];
+            const aAlm = aAlmacenes.join(", ");
             oReg.setProperty("/resumen", {
                 posiciones: aReg,
                 tituloPosiciones: this.getText("posicionesTitulo", [aReg.length]),     // EH-13
@@ -172,7 +173,7 @@ sap.ui.define([
                 lineaFecha: this.getText("resumenFechaGuia", [this.fechaCorta(d.cabecera.fechaContabilizacion), d.cabecera.guiaRemision]),
                 aRegistrar: this.getText("resumenARegistrar", [aReg.length]),
                 noRegistradas: this.getText("resumenNoRegistradas", [d.posiciones.length - aReg.length]),
-                aviso: this.getText("resumenAvisoEntrada", [aAlm])
+                aviso: this.getText(aAlmacenes.length > 1 ? "resumenAvisoEntradaVarios" : "resumenAvisoEntrada", [aAlm])  // EH-14
             });
             if (!this._pResumen) {
                 this._pResumen = this.loadFragment({ name: "pe.pucp.tesis.migodcu.view.fragment.ResumenEntrada" });
