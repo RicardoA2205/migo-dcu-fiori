@@ -23,7 +23,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 pos: p.pos, material: p.material, descripcion: p.descripcion,
                 cantidadPendiente: p.cantidadPendiente, cantidadRecibida: String(p.cantidadPendiente),
                 unidad: p.unidad, centro: p.centro, almacen: p.almacen, tipoStock: p.tipoStock || "",
-                conforme: false
+                conforme: false, marca: ""               // marca: "" | "conforme" | "excluida" (EH-07)
             }));
             this.getModel("reg").setData({
                 orden: { numero: oOrden.numero, proveedor: oOrden.proveedor, fecha: this.fechaCorta(oOrden.fecha) },
@@ -48,7 +48,10 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
         },
         _marcarSeleccion(bConforme) {
             const oTabla = this.byId("tblPosiciones");
-            oTabla.getSelectedContexts().forEach((oCtx) => oCtx.getModel().setProperty(oCtx.getPath() + "/conforme", bConforme));
+            oTabla.getSelectedContexts().forEach((oCtx) => {
+                oCtx.getModel().setProperty(oCtx.getPath() + "/conforme", bConforme);
+                oCtx.getModel().setProperty(oCtx.getPath() + "/marca", bConforme ? "conforme" : "excluida");
+            });
             this.marcarModificado();
             oTabla.removeSelections(true);
             this.onSeleccion();

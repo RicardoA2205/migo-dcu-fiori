@@ -82,7 +82,9 @@
                         <core:Icon src="sap-icon://locked" tooltip="{i18n>ttCentro}" class="sapUiTinyMarginBegin"/>
                     </HBox>
                     <Input value="{reg>almacen}" valueLiveUpdate="true"/>
-                    <CheckBox selected="{reg>conforme}"/>
+                    <ObjectStatus text="{= ${reg>marca} === 'conforme' ? ${i18n>estadoConforme} : (${reg>marca} === 'excluida' ? ${i18n>estadoExcluida} : '') }"
+                        state="{= ${reg>marca} === 'conforme' ? 'Success' : 'None' }"
+                        icon="{= ${reg>marca} === 'conforme' ? 'sap-icon://sys-enter-2' : (${reg>marca} === 'excluida' ? 'sap-icon://sys-cancel-2' : '') }"/>
                     <Text text="{reg>tipoStock}"/>
                 </ColumnListItem>
             </items>
