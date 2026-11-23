@@ -115,6 +115,19 @@ sap.ui.define([
 
         onVerAlternativasMensaje() { /* solo se usa en la salida por producción */ },
 
+        // ---------- ayuda de la pantalla (EH-22) ----------
+        async onAyuda(oEvent) {
+            const oBoton = oEvent.getSource();
+            if (!this._pAyuda) {
+                this._pAyuda = this.loadFragment({ name: "pe.pucp.tesis.migodcu.view.fragment.Ayuda" });
+            }
+            const oPopover = await this._pAyuda;
+            const sPantalla = this.getView().getViewName().split(".").pop();
+            const sGuia = this.datos().getProperty("/config/ejemploGuia");
+            this.byId("txtAyuda").setText(this.getText("ayuda" + sPantalla, [sGuia]));
+            oPopover.openBy(oBoton);
+        },
+
         onVolverInicio() { this.getRouter().navTo("inicio"); }
     });
 });

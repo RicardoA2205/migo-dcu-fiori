@@ -1,6 +1,9 @@
 <mvc:View controllerName="pe.pucp.tesis.migodcu.controller.Inicio"
     xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
     <Page id="pageInicio" title="{i18n>inicioTitulo}">
+        <headerContent>
+            <Button id="btnAyudaInicio" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
         <VBox class="sapUiMediumMargin">
             <Title text="{i18n>grupoAlmacen}" titleStyle="H2" class="sapUiSmallMarginBottom"/>
             <HBox wrap="Wrap">
