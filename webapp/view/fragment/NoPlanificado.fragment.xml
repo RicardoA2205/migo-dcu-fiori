@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="dlgNoPlanificado" title="{i18n>npTitulo}" contentWidth="28rem">
+        <VBox class="sapUiSmallMargin">
+            <Label text="{i18n>colMaterial}" labelFor="inpNpMaterial" required="true"/>
+            <Input id="inpNpMaterial" value="{reg>/nuevo/material}" valueState="{reg>/nuevo/estado}"
+                valueStateText="{reg>/nuevo/estadoTexto}" showSuggestion="true" suggestionItems="{datos>/materiales}">
+                <suggestionItems><core:ListItem key="{datos>material}" text="{datos>material}" additionalText="{datos>descripcion}"/></suggestionItems>
+            </Input>
+            <Label text="{i18n>colEntregar}" labelFor="inpNpCantidad" required="true" class="sapUiSmallMarginTop"/>
+            <Input id="inpNpCantidad" value="{reg>/nuevo/cantidad}" type="Number"/>
+            <Label text="{i18n>colAlmacenOrigen}" labelFor="inpNpAlmacen" required="true" class="sapUiSmallMarginTop"/>
+            <Input id="inpNpAlmacen" value="{reg>/nuevo/almacen}"/>
+        </VBox>
+        <buttons>
+            <Button text="{i18n>btnCancelar}" type="Transparent" press=".onCancelarNoPlanificado"/>
+            <Button id="btnAgregarNp" text="{i18n>btnAgregar}" type="Emphasized" press=".onAgregarNoPlanificado"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

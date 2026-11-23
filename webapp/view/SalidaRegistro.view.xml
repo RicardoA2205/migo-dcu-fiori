@@ -1,0 +1,88 @@
+<mvc:View controllerName="pe.pucp.tesis.migodcu.controller.SalidaRegistro"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="pageSalidaRegistro" title="{i18n>tituloSalida}" showNavButton="true" navButtonPress=".onCancelar">
+        <headerContent>
+            <Button id="btnAyudaSalidaRegistro" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
+        </headerContent>
+        <Panel headerText="{reg>/textos/tituloOrden}" class="sapUiResponsiveMargin" width="auto">
+            <ObjectAttribute title="{i18n>lblMaterialFabricar}" text="{reg>/orden/materialTexto}"/>
+            <ObjectStatus text="{i18n>estadoLiberada}" state="Success"/>
+            <ObjectAttribute title="{i18n>lblFechaInicio}" text="{reg>/orden/fechaInicio}"/>
+            <Text text="{i18n>claseMov261}"/>
+        </Panel>
+
+        <Panel headerText="{i18n>datosSalida}" class="sapUiResponsiveMargin" width="auto">
+            <FlexBox wrap="Wrap" alignItems="End">
+                <VBox class="sapUiSmallMarginEnd" width="14rem">
+                    <Label text="{i18n>lblFechaDoc}" labelFor="dpFechaDocSal"/>
+                    <DatePicker id="dpFechaDocSal" value="{reg>/cabecera/fechaDocumento}" valueFormat="yyyy-MM-dd" displayFormat="dd/MM/yyyy"/>
+                </VBox>
+                <VBox class="sapUiSmallMarginEnd" width="14rem">
+                    <Label text="{i18n>lblFechaCont}" labelFor="dpFechaContSal"/>
+                    <DatePicker id="dpFechaContSal" value="{reg>/cabecera/fechaContabilizacion}" valueFormat="yyyy-MM-dd" displayFormat="dd/MM/yyyy"/>
+                </VBox>
+                <VBox width="24rem">
+                    <Label text="{i18n>lblTextoCabecera}" labelFor="inpTextoCab"/>
+                    <Input id="inpTextoCab" value="{reg>/cabecera/textoCabecera}" maxLength="25"/>
+                </VBox>
+            </FlexBox>
+        </Panel>
+
+        <Table id="tblComponentes" class="sapUiResponsiveMargin" width="auto" items="{reg>/posiciones}"
+            sticky="HeaderToolbar,ColumnHeaders">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="{reg>/textos/tituloPosiciones}" level="H2"/>
+                    <ToolbarSpacer/>
+                    <Link text="{i18n>lnkNoPlanificado}" press=".onNoPlanificado"/>
+                    <Button icon="sap-icon://action-settings" tooltip="{i18n>ttColumnas}" press=".onColumnas"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
+                <Column><Text text="{i18n>colMaterial}"/></Column>
+                <Column><Text text="{i18n>colDescripcion}"/></Column>
+                <Column hAlign="End"><Text text="{i18n>colNecesaria}"/></Column>
+                <Column width="7rem"><Text text="{i18n>colEntregar}"/></Column>
+                <Column><Text text="{i18n>colUnidad}"/></Column>
+                <Column><Text text="{i18n>colStock}"/></Column>
+                <Column width="7rem"><Text text="{i18n>colAlmacenOrigen}"/></Column>
+                <Column><Text text="{i18n>colCentro}"/></Column>
+                <Column width="8rem"><Text text="{i18n>colLote}"/></Column>
+                <Column hAlign="Center"><Text text="{i18n>colConforme}"/></Column>
+                <Column visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
+            </columns>
+            <items>
+                <ColumnListItem highlight="{= ${reg>faltante} > 0 &amp;&amp; ${reg>conforme} ? 'Warning' : 'None' }">
+                    <Text text="{reg>pos}"/>
+                    <Text text="{reg>material}"/>
+                    <Text text="{reg>descripcion}"/>
+                    <ObjectNumber number="{reg>cantidadNecesaria}"/>
+                    <Input value="{reg>cantidadEntregar}" type="Number" textAlign="End" valueLiveUpdate="true" change=".onCambioFila"/>
+                    <Text text="{reg>unidad}"/>
+                    <ObjectStatus text="{reg>stockTexto}" state="{= ${reg>faltante} > 0 ? 'Warning' : 'None' }"
+                        icon="{= ${reg>faltante} > 0 ? 'sap-icon://alert' : '' }" active="{= ${reg>faltante} > 0 }"
+                        press=".onVerAlternativasFila"/>
+                    <Input value="{reg>almacen}" valueLiveUpdate="true" change=".onCambioFila"/>
+                    <HBox alignItems="Center">
+                        <Text text="{reg>centro}"/>
+                        <core:Icon src="sap-icon://locked" tooltip="{i18n>ttCentro}" class="sapUiTinyMarginBegin"/>
+                    </HBox>
+                    <Input value="{reg>lote}" enabled="{reg>manejaLote}" change=".onCambioFila"/>
+                    <CheckBox selected="{reg>conforme}"/>
+                    <Text text="{reg>tipoStock}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <footer>
+            <OverflowToolbar>
+                <core:Fragment fragmentName="pe.pucp.tesis.migodcu.view.fragment.BotonMensajes" type="XML"/>
+                <ToolbarSpacer/>
+                <Button text="{i18n>btnCancelar}" press=".onCancelar"/>
+                <Button text="{i18n>btnVerificar}" press=".onVerificar"/>
+                <Button text="{i18n>btnContabilizar}" type="Emphasized" press=".onContabilizar"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
