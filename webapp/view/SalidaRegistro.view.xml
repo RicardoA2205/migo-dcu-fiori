@@ -4,6 +4,11 @@
         <headerContent>
             <Button id="btnAyudaSalidaRegistro" icon="sap-icon://sys-help" tooltip="{i18n>ayudaTitulo}" press=".onAyuda"/>
         </headerContent>
+        <subHeader>
+            <OverflowToolbar design="Info">
+                <Title id="txtPasoSalida2" text="{i18n>pasoSalida2}" level="H2"/>
+            </OverflowToolbar>
+        </subHeader>
         <Panel headerText="{reg>/textos/tituloOrden}" class="sapUiResponsiveMargin" width="auto">
             <ObjectAttribute title="{i18n>lblMaterialFabricar}" text="{reg>/orden/materialTexto}"/>
             <ObjectStatus text="{i18n>estadoLiberada}" state="Success"/>
