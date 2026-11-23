@@ -8,18 +8,19 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
-  "dependencies": {},
   "devDependencies": {
-    "@ui5/cli": "^4.0.33",
-    "@sap/ux-ui5-tooling": "1",
     "@sap-ux/eslint-plugin-fiori-tools": "^10.0.0",
-    "eslint": "^10"
+    "@sap/ux-ui5-tooling": "1",
+    "@ui5/cli": "^4.0.33",
+    "eslint": "^10",
+    "playwright-core": "^1.65.1"
   },
   "scripts": {
     "start": "fiori run --open \"/test/flpSandbox.html?sap-ui-xx-viewCache=false#pepucptesismigodcu-display\"",
     "start-local": "fiori run --config ./ui5-local.yaml --open \"/test/flpSandbox.html?sap-ui-xx-viewCache=false#pepucptesismigodcu-display\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
     "pages": "npm run build && node scripts/pages.js",
+    "capturas": "node scripts/capturas.mjs",
     "lint": "eslint ./",
     "deploy": "fiori verify",
     "deploy-config": "fiori add deploy-config",
