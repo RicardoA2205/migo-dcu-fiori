@@ -167,6 +167,7 @@ sap.ui.define([
             const aAlm = [...new Set(aReg.map((p) => p.almacen))].join(", ");
             oReg.setProperty("/resumen", {
                 posiciones: aReg,
+                tituloPosiciones: this.getText("posicionesTitulo", [aReg.length]),     // EH-13
                 lineaOrden: this.getText("resumenLineaOrdenCompra", [d.orden.numero, d.orden.proveedor]),
                 lineaFecha: this.getText("resumenFechaGuia", [this.fechaCorta(d.cabecera.fechaContabilizacion), d.cabecera.guiaRemision]),
                 aRegistrar: this.getText("resumenARegistrar", [aReg.length]),
