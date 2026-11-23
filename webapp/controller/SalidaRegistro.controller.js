@@ -196,6 +196,7 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 this.getText("resumenParcial", [p.pos, p.cantidadEntregar, p.cantidadNecesaria, p.unidad]));
             oReg.setProperty("/resumen", {
                 posiciones: aReg,
+                tituloPosiciones: this.getText("posicionesTitulo", [aReg.length]),     // EH-13
                 lineaOrden: this.getText("resumenLineaOrdenProd", [d.orden.numero, d.orden.descripcion]),
                 lineaFecha: this.getText("resumenFecha", [this.fechaCorta(d.cabecera.fechaContabilizacion)]),
                 aRegistrar: this.getText("resumenARegistrarSalida", [aReg.length, aReg.filter((p) => p.noPlanificado).length]),

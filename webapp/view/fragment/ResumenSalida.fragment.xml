@@ -9,7 +9,12 @@
             <Text text="{reg>/resumen/lineaOrden}"/>
             <Text text="{i18n>claseMov261}" class="sapUiTinyMarginTop"/>
             <Text text="{reg>/resumen/lineaFecha}" class="sapUiTinyMarginTop"/>
-            <Table items="{reg>/resumen/posiciones}" class="sapUiSmallMarginTop">
+            <Table items="{reg>/resumen/posiciones}" class="sapUiSmallMarginTop" sticky="HeaderToolbar,ColumnHeaders">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{reg>/resumen/tituloPosiciones}" level="H3"/>
+                    </OverflowToolbar>
+                </headerToolbar>
                 <columns>
                     <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
                     <Column><Text text="{i18n>colMaterial}"/></Column>
