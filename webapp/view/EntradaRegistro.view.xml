@@ -50,6 +50,8 @@
             <headerToolbar>
                 <OverflowToolbar>
                     <Title text="{reg>/textos/tituloPosiciones}" level="H2"/>
+                    <SearchField id="sfPosiciones" width="18rem" placeholder="{i18n>buscarPosiciones}"
+                        liveChange=".onBuscarPosicion" search=".onBuscarPosicion" class="sapUiSmallMarginBegin"/>
                     <ToolbarSpacer/>
                     <Text text="{reg>/textos/seleccionadas}"/>
                     <Button text="{i18n>btnMarcarConforme}" enabled="{= ${reg>/seleccionadas} > 0 }" press=".onMarcarConforme"/>

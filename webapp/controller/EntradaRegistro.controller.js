@@ -1,4 +1,6 @@
-sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageToast"], (BaseController, JSONModel, MessageToast) => {
+sap.ui.define([
+    "./BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageToast", "sap/ui/model/Filter", "sap/ui/model/FilterType"
+], (BaseController, JSONModel, MessageToast, Filter, FilterType) => {
     "use strict";
 
     return BaseController.extend("pe.pucp.tesis.migodcu.controller.EntradaRegistro", {
@@ -36,6 +38,8 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
                 }
             });
             this.byId("tblPosiciones").removeSelections(true);
+            this.byId("sfPosiciones").setValue("");
+            this._filtrarPosiciones("");
             this.reiniciarCambios();
         },
 
@@ -58,6 +62,22 @@ sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/Message
         },
         onMarcarConforme() { this._marcarSeleccion(true); },
         onExcluir() { this._marcarSeleccion(false); },
+
+        // ---------- buscador de posiciones (EH-12) ----------
+        onBuscarPosicion(oEvent) {
+            const sTexto = oEvent.getParameter("newValue") ?? oEvent.getParameter("query") ?? "";
+            this._filtrarPosiciones(sTexto);
+        },
+        _filtrarPosiciones(sTexto) {
+            const sQ = sTexto.trim().toLowerCase();
+            const contiene = (v) => String(v).toLowerCase().includes(sQ);
+            const aFiltros = sQ ? [new Filter({
+                filters: ["pos", "material", "descripcion"].map((sCampo) => new Filter({ path: sCampo, test: contiene })),
+                and: false
+            })] : [];
+            const oBinding = this.byId("tblPosiciones").getBinding("items");
+            if (oBinding) { oBinding.filter(aFiltros, FilterType.Application); }
+        },
 
         async onColumnas(oEvent) {
             if (!this._pColumnas) {
