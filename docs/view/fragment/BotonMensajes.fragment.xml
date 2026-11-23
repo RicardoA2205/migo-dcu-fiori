@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-    <!-- EH-05: botón Mensajes del patrón MessagePopover (ícono de error y contador) -->
+    <!-- EH-05: botón Mensajes del patrón MessagePopover (ícono de error y contador); solo aparece si hay mensajes (SAP Fiori Design Guidelines) -->
     <Button id="btnMensajes" icon="sap-icon://message-error" ariaHasPopup="Dialog"
         text="{= ${i18n>btnMensajes} + (${message>/}.length > 0 ? ' (' + ${message>/}.length + ')' : '') }"
-        type="{= ${message>/}.length > 0 ? 'Negative' : 'Default' }" enabled="{= ${message>/}.length > 0 }"
+        type="Negative" visible="{= ${message>/}.length > 0 }"
         press=".onMensajes"/>
 </core:FragmentDefinition>

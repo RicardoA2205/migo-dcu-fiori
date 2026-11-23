@@ -81,7 +81,7 @@ await ctrl("EntradaRegistro", `
     const t = c.byId("tblPosiciones");
     [0, 1, 2].forEach((i) => t.getItems()[i].setSelected(true)); c.onSeleccion(); c.onMarcarConforme();
     t.getItems()[3].setSelected(true); c.onSeleccion(); c.onExcluir();`);
-await foto("EH-07_despues");
+await foto("EH-07_despues", "EH-08_despues");
 
 // cantidad mayor a la pendiente: aviso al escribir (EH-10)
 const cantidad2 = page.locator('[id$="--tblPosiciones"] tbody tr').nth(1).locator("input[type='number']").first();
@@ -177,7 +177,7 @@ await page.keyboard.press("Escape");
 await ctrl("SalidaRegistro", `
     const i = c.getModel("reg").getProperty("/posiciones").findIndex((p) => p.faltante > 0);
     if (i >= 0) { await c._abrirAlternativas(i); }`);
-await foto("P261-03_Stock_insuficiente");
+await foto("P261-03_Stock_insuficiente", "EH-19_despues");
 await page.locator('[id$="--rbOpcion1"]').click();
 await page.locator('[id$="--btnAplicarAlternativa"]').click();
 await pausa(500);

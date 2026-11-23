@@ -1,4 +1,10 @@
-d8774c1 (HEAD -> main) Evidencias: script de capturas a 1440x900 (Playwright) y capturas preliminares con datos de ejemplo
+d903414 (HEAD -> main) EH-22 (complemento): ayuda contextual en «Texto de cabecera» y «Lote»
+ef76807 EH-18 (complemento): el lote se marca como obligatorio cuando corresponde
+4d11dda EH-19: los mensajes de stock identifican el componente con los mismos datos de la tabla
+402850b EH-08: un solo término para las posiciones que se registran (conformes) y su opuesto (excluidas), con los rótulos de la Tabla K1
+5e27995 EH-05 (complemento): el botón Mensajes solo aparece si hay mensajes
+19327ec Evidencias: correcciones R4.1, trazabilidad, autoprueba H1, plantilla de datos, historial y resumen
+d8774c1 Evidencias: script de capturas a 1440x900 (Playwright) y capturas preliminares con datos de ejemplo
 d62369b Publicación en GitHub Pages: scripts/pages.js, script pages y carpeta docs/ (Anexo A.22)
 2de97de (tag: v1.1) v1.1: flujo de salida por producción completo
 c7febb4 EH-16: tabla de la 261 sin cortes a 1440 px con densidad compacta

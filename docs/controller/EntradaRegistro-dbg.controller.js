@@ -140,7 +140,7 @@ sap.ui.define([
                 }
                 if (!p.conforme) { return; }
                 if (!(nCant > 0)) {
-                    err(`/posiciones/${i}/cantidadRecibida`, this.getText("errCantidadCero", [p.pos]), this.getText("errCantidadCeroDesc", [p.pos]));
+                    err(`/posiciones/${i}/cantidadRecibida`, this.getText("errCantidadCero", [p.pos]), this.getText("errCantidadCeroDescEntrada", [p.pos]));
                 }
                 if (!this.almacenExiste(p.centro, p.almacen)) {
                     err(`/posiciones/${i}/almacen`, this.getText("errAlmacen", [p.pos, p.almacen, p.centro]),
