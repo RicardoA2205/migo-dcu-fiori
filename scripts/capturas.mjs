@@ -1,19 +1,22 @@
 // Capturas de evidencia del R4.2 a 1440x900 (pantallas del Anexo K, caminos de error y EH corregidos).
 // Uso: con `npm start` corriendo en otra terminal, ejecutar `npm run capturas`.
 // Usa el Chrome instalado (playwright-core, canal "chrome"); no descarga navegadores.
-// Al pasar a los datos de la PUCP (v1.2) solo hay que cambiar DATOS.
+// Si cambian los datos de prueba (webapp/model/datosPrueba.json), solo hay que cambiar DATOS.
 import { chromium } from "playwright-core";
 import fs from "node:fs";
 import path from "node:path";
 
 const DATOS = {
-    pedido: "PEDIDO-P1",            // pedido de compra con varias posiciones pendientes
-    pedidoInexistente: "9999999999",
-    ordenLiberada: "ORDEN-P1",      // con un componente con faltante y uno por lotes
-    ordenSinLiberar: "ORDEN-SIN-LIBERAR",
-    lote: "LOTE-1",                 // lote del componente que se maneja por lotes
-    materialInexistente: "NO-EXISTE",
-    almacenInexistente: "ALM9",
+    pedido: "4500018732",           // orden de compra con 40 posiciones pendientes
+    pedidoInexistente: "4500099999",
+    ordenLiberada: "1000452",       // con un componente con faltante y uno por lotes
+    ordenSinLiberar: "1000458",
+    ordenInexistente: "1000999",
+    lote: "LP-261104",              // lote del componente que se maneja por lotes
+    materialInexistente: "99999999",
+    almacenInexistente: "0099",
+    busqueda: "electrodo",          // EH-12: filtra 3 de las 40 posiciones
+    conformesResumen: [0, 1, 22],   // posiciones de los almacenes 0001 y 0002 (aviso en plural, EH-14)
     fechaPeriodoCerrado: "2026-09-15"
 };
 
@@ -72,7 +75,7 @@ await page.waitForFunction(() => !!sap.ui.core.Element.getElementById("applicati
 await pausa(1500);
 await foto("P101-02_Registro_de_la_entrada", "EH-01_despues");
 
-await page.locator('[id$="--sfPosiciones-I"]').fill("material-3");
+await page.locator('[id$="--sfPosiciones-I"]').fill(DATOS.busqueda);
 await foto("EH-12_despues");
 await page.locator('[id$="--sfPosiciones-I"]').fill("");
 await page.locator('[id$="--sfPosiciones-I"]').press("Enter");
@@ -140,8 +143,8 @@ await page.keyboard.press("Escape");
 // ---------- P101-03 y P101-04 ----------
 await ctrl("EntradaRegistro", `
     const m = c.getModel("reg");
-    [0, 1, 2].forEach((i) => { m.setProperty("/posiciones/" + i + "/conforme", true); m.setProperty("/posiciones/" + i + "/marca", "conforme"); });
-    await c.onContabilizar();`);
+    a.forEach((i) => { m.setProperty("/posiciones/" + i + "/conforme", true); m.setProperty("/posiciones/" + i + "/marca", "conforme"); });
+    await c.onContabilizar();`, DATOS.conformesResumen);
 await foto("P101-03_Resumen_antes_de_contabilizar", "EH-13_despues", "EH-14_despues");
 await page.locator('[id$="--btnConfirmarEntrada"]').click();
 await page.waitForFunction(() => !!sap.ui.core.Element.getElementById("application-pepucptesismigodcu-display-component---Resultado"));
@@ -153,7 +156,7 @@ await abrir("salida", "SalidaOrden");
 await campo("inpOrdenProduccion").fill(DATOS.ordenSinLiberar);
 await campo("inpOrdenProduccion").press("Enter");
 await foto("P261-01-E_Orden_no_liberada");
-await campo("inpOrdenProduccion").fill(DATOS.pedidoInexistente);
+await campo("inpOrdenProduccion").fill(DATOS.ordenInexistente);
 await campo("inpOrdenProduccion").press("Enter");
 await foto("P261-01-E_Orden_inexistente");
 await campo("inpOrdenProduccion").fill(DATOS.ordenLiberada);
