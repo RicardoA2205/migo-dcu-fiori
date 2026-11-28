@@ -1,5 +1,9 @@
-4db7740 (HEAD -> main, tag: v1.2) v1.2: complementos de EH-05, EH-08, EH-18, EH-19 y EH-22 y publicación en GitHub Pages
-fc38ab0 (origin/main) Evidencias: historial de git y etiquetas actualizados
+7b337cc (HEAD -> main, tag: v1.3) v1.3: datos de prueba realistas de planta industrial y cabecera alineada con el contenido
+9f3416b Datos de prueba realistas de planta industrial (centro 1000 «Planta Lurín»)
+4c63e25 Estilos: cabecera y barra de pasos alineadas con el contenido (2rem)
+3cf5c34 (origin/main) Evidencias: historial de git y etiquetas con la v1.2
+4db7740 (tag: v1.2) v1.2: complementos de EH-05, EH-08, EH-18, EH-19 y EH-22 y publicación en GitHub Pages
+fc38ab0 Evidencias: historial de git y etiquetas actualizados
 82e4676 Evidencias: enlace de GitHub Pages, recorrido de los dos flujos publicados y capturas actualizadas
 1d340ec EH-05 (corrección): la lista de mensajes espera a que el botón Mensajes esté dibujado
 0f061bd Evidencias: EH-05, EH-08, EH-18, EH-19 y EH-22 con las Tablas K1 y L3; capturas y docs/ actualizados

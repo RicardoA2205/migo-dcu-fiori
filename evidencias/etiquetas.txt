@@ -2,3 +2,4 @@ v0.1            Proyecto base (SAP Fiori tools, plantilla Basic, SAPUI5 1.136)
 v1.0            Flujo de entrada por compras (P00, P101-01 a P101-04)
 v1.1            Flujo de salida por producción (P261-01 a P261-05)
 v1.2            Complementos de EH-05, EH-08, EH-18, EH-19 y EH-22 y publicación en GitHub Pages
+v1.3            Datos de prueba realistas de planta industrial y cabecera alineada con el contenido
