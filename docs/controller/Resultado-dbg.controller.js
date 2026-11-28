@@ -16,9 +16,15 @@ sap.ui.define(["./BaseController", "sap/m/MessageToast"], (BaseController, Messa
             // eslint-disable-next-line @sap-ux/fiori-tools/sap-no-navigator -- UI5 no tiene API propia para el portapapeles
             navigator.clipboard.writeText(sDoc).then(() => MessageToast.show(this.getText("numeroCopiado")));
         },
+        // Al salir del resultado se restauran los datos de prueba: la orden vuelve a salir completa
         onOtra() {
             const sFlujo = this.getOwnerComponent().getModel("resultado").getProperty("/flujo");
+            this.getOwnerComponent().restaurarDatos();
             this.getRouter().navTo(sFlujo === "salida" ? "salidaOrden" : "entradaOrden");
+        },
+        onVolverInicio() {
+            this.getOwnerComponent().restaurarDatos();
+            this.getRouter().navTo("inicio");
         }
     });
 });
