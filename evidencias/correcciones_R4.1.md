@@ -17,9 +17,9 @@ Las 23 recomendaciones de la Tabla L3 (leída del Word de la tesis) se corrigier
 | EH-11 | 2 | Hecho | `errCantidadMayorDesc` agrega «Ingrese como máximo {1} {2}.» | `8ffafe1` | `EH-11_despues.png` |
 | EH-12 | 2 | Hecho | Densidad compacta en escritorio (`getContentDensityClass`, Walkthrough paso 36) y `SearchField` que filtra por pos., material y descripción | `19b10f3`, `96c775a` | `EH-12_despues.png` |
 | EH-13 | 2 | Hecho | Título «Posiciones (n)» y `sticky="HeaderToolbar,ColumnHeaders"` en la tabla de los dos resúmenes | `1b68796`, `7378117` | `EH-13_despues.png` |
-| EH-14 | 2 | Hecho | Plural: «en los almacenes ALM1, ALM2» (singular si es uno) | `3538a77` | `EH-14_despues.png` |
+| EH-14 | 2 | Hecho | Plural: «en los almacenes 0001, 0002» (singular si es uno) | `3538a77` | `EH-14_despues.png` |
 | EH-15 | 3 | Ya resuelto en la guía | «Continuar» solo se habilita si la orden está liberada | — | `P261-01-E_Orden_no_liberada.png` |
-| EH-16 | 3 | Hecho | Medido a 1440×900 compacto: las 12 columnas caben (1376 de 1376 px, sin desplazamiento); se fija el ancho de Código de material y Conforme para que el código no se parta | `c7febb4` | `EH-16_despues.png` |
+| EH-16 | 3 | Hecho | Medido a 1440×900 compacto: las 12 columnas caben (1376 de 1376 px, sin desplazamiento); con los datos de la v1.3, la Descripción ocupa el espacio libre y las demás columnas tienen ancho fijo, para que cada componente quede en una línea | `c7febb4` | `EH-16_despues.png` |
 | EH-17 | 1 | Hecho | En la 261, Centro antes que Almacén de origen (columnas y celdas), como en la 101 | `d5da577` | `EH-17_despues.png` |
 | EH-18 | 2 | Hecho | El lote arranca vacío (sin texto que parezca dato) y se marca como obligatorio (asterisco en el encabezado y `required` en el campo) solo para materiales por lotes | `ef76807` | `EH-18_despues.png` |
 | EH-19 | 2 | Hecho | Los mensajes de stock y P261-03 identifican el componente con los mismos datos de la tabla: posición, código de material, descripción y almacén | `4d11dda` | `EH-19_despues.png` |

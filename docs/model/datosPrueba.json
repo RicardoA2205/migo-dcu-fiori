@@ -6,8 +6,8 @@
     ],
     "formatoGuia": "^T\\d{3}-\\d{8}$",
     "ejemploGuia": "T001-00004587",
-    "siguienteDocEntrada": 5000000001,
-    "siguienteDocSalida": 4900000001,
+    "siguienteDocEntrada": 5000014820,
+    "siguienteDocSalida": 4900007315,
     "tiposVale": [
       {
         "clave": "1",
@@ -21,753 +21,753 @@
   },
   "almacenes": [
     {
-      "centro": "CENTRO",
-      "almacen": "ALM1",
-      "descripcion": "Descripción del almacén 1"
+      "centro": "1000",
+      "almacen": "0001",
+      "descripcion": "Materias primas"
     },
     {
-      "centro": "CENTRO",
-      "almacen": "ALM2",
-      "descripcion": "Descripción del almacén 2"
+      "centro": "1000",
+      "almacen": "0002",
+      "descripcion": "Repuestos y consumibles"
     }
   ],
   "materiales": [
     {
-      "material": "MATERIAL-01",
-      "descripcion": "Descripción del material 01",
+      "material": "10000125",
+      "descripcion": "Perno hex. 1/2\" x 2\" UNC gr. 5 zincado",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-02",
-      "descripcion": "Descripción del material 02",
+      "material": "10000126",
+      "descripcion": "Tuerca hex. 1/2\" UNC gr. 5 zincada",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-03",
-      "descripcion": "Descripción del material 03",
+      "material": "10000131",
+      "descripcion": "Arandela plana 1/2\" acero zincado",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-04",
-      "descripcion": "Descripción del material 04",
+      "material": "10000132",
+      "descripcion": "Arandela de presión 1/2\" zincada",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-05",
-      "descripcion": "Descripción del material 05",
+      "material": "10000140",
+      "descripcion": "Perno hex. 5/8\" x 3\" UNC gr. 5 zincado",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-06",
-      "descripcion": "Descripción del material 06",
+      "material": "10000141",
+      "descripcion": "Tuerca hex. 5/8\" UNC gr. 5 zincada",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-07",
-      "descripcion": "Descripción del material 07",
+      "material": "10000210",
+      "descripcion": "Plancha LAF 2.0 mm 1.2x2.4 m ASTM A1008",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-08",
-      "descripcion": "Descripción del material 08",
+      "material": "10000212",
+      "descripcion": "Plancha LAF 3.0 mm 1.2x2.4 m ASTM A1008",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-09",
-      "descripcion": "Descripción del material 09",
+      "material": "10000225",
+      "descripcion": "Plancha LAC 6.0 mm 1.5x6.0 m ASTM A36",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-10",
-      "descripcion": "Descripción del material 10",
+      "material": "10000310",
+      "descripcion": "Ángulo acero 2\"x2\"x3/16\" x 6 m ASTM A36",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-11",
-      "descripcion": "Descripción del material 11",
+      "material": "10000312",
+      "descripcion": "Ángulo acero 1 1/2\"x1 1/2\"x1/8\" x 6 m",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-12",
-      "descripcion": "Descripción del material 12",
+      "material": "10000330",
+      "descripcion": "Platina acero 2\" x 1/4\" x 6 m ASTM A36",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-13",
-      "descripcion": "Descripción del material 13",
+      "material": "10000415",
+      "descripcion": "Tubo cuadrado 40x40x2.0 mm x 6 m A500",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-14",
-      "descripcion": "Descripción del material 14",
+      "material": "10000418",
+      "descripcion": "Tubo rectangular 80x40x2.0 mm x 6 m A500",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-15",
-      "descripcion": "Descripción del material 15",
+      "material": "10000425",
+      "descripcion": "Tubo redondo SCH 40 2\" x 6.4 m ASTM A53",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-16",
-      "descripcion": "Descripción del material 16",
+      "material": "10000510",
+      "descripcion": "Cable THW-90 14 AWG 600 V negro",
+      "unidad": "M",
+      "lote": false
+    },
+    {
+      "material": "10000512",
+      "descripcion": "Cable THW-90 12 AWG 600 V rojo",
+      "unidad": "M",
+      "lote": false
+    },
+    {
+      "material": "10000515",
+      "descripcion": "Cable THW-90 10 AWG 600 V azul",
+      "unidad": "M",
+      "lote": false
+    },
+    {
+      "material": "10000520",
+      "descripcion": "Cable NH-80 4 mm2 amarillo/verde",
+      "unidad": "M",
+      "lote": false
+    },
+    {
+      "material": "10000610",
+      "descripcion": "Terminal ojo 10 AWG M6 cobre estañado",
+      "unidad": "CJ",
+      "lote": false
+    },
+    {
+      "material": "10000612",
+      "descripcion": "Terminal puntera aislado 14 AWG",
+      "unidad": "CJ",
+      "lote": false
+    },
+    {
+      "material": "10000630",
+      "descripcion": "Prensaestopa PVC PG-16 gris",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-17",
-      "descripcion": "Descripción del material 17",
+      "material": "30000105",
+      "descripcion": "Electrodo E6011 1/8\" AWS A5.1",
+      "unidad": "KG",
+      "lote": false
+    },
+    {
+      "material": "30000106",
+      "descripcion": "Electrodo E7018 1/8\" AWS A5.1",
+      "unidad": "KG",
+      "lote": false
+    },
+    {
+      "material": "30000108",
+      "descripcion": "Electrodo E7018 5/32\" AWS A5.1",
+      "unidad": "KG",
+      "lote": false
+    },
+    {
+      "material": "30000210",
+      "descripcion": "Disco de corte metal 4 1/2\" x 1/16\"",
+      "unidad": "CJ",
+      "lote": false
+    },
+    {
+      "material": "30000212",
+      "descripcion": "Disco de corte metal 7\" x 1/16\"",
+      "unidad": "CJ",
+      "lote": false
+    },
+    {
+      "material": "30000220",
+      "descripcion": "Disco de desbaste metal 4 1/2\" x 1/4\"",
+      "unidad": "CJ",
+      "lote": false
+    },
+    {
+      "material": "30000225",
+      "descripcion": "Disco flap zirconio 4 1/2\" grano 60",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-18",
-      "descripcion": "Descripción del material 18",
+      "material": "30000310",
+      "descripcion": "Pintura anticorrosiva alquídica gris",
+      "unidad": "L",
+      "lote": false
+    },
+    {
+      "material": "30000312",
+      "descripcion": "Esmalte sintético negro brillante",
+      "unidad": "L",
+      "lote": false
+    },
+    {
+      "material": "30000320",
+      "descripcion": "Thinner acrílico estándar",
+      "unidad": "L",
+      "lote": false
+    },
+    {
+      "material": "30000410",
+      "descripcion": "Guante cuero caña larga para soldador",
+      "unidad": "PAR",
+      "lote": false
+    },
+    {
+      "material": "30000412",
+      "descripcion": "Guante cuero corto tipo driver",
+      "unidad": "PAR",
+      "lote": false
+    },
+    {
+      "material": "30000420",
+      "descripcion": "Lente de seguridad claro ANSI Z87.1",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-19",
-      "descripcion": "Descripción del material 19",
+      "material": "30000430",
+      "descripcion": "Cinta aislante PVC 3/4\" x 20 m negra",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-20",
-      "descripcion": "Descripción del material 20",
+      "material": "30000440",
+      "descripcion": "Broca HSS 3/8\" DIN 338",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-21",
-      "descripcion": "Descripción del material 21",
+      "material": "30000445",
+      "descripcion": "Broca HSS 1/4\" DIN 338",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-22",
-      "descripcion": "Descripción del material 22",
+      "material": "30000450",
+      "descripcion": "Trapo industrial de algodón",
+      "unidad": "KG",
+      "lote": false
+    },
+    {
+      "material": "30000460",
+      "descripcion": "Escobilla circular alambre 4\" M14",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-23",
-      "descripcion": "Descripción del material 23",
+      "material": "10000215",
+      "descripcion": "Plancha LAF 1.5 mm 1.2x2.4 m ASTM A1008",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-24",
-      "descripcion": "Descripción del material 24",
+      "material": "10000120",
+      "descripcion": "Perno hex. 3/8\" x 1\" UNC gr. 5 zincado",
       "unidad": "UN",
       "lote": false
     },
     {
-      "material": "MATERIAL-25",
-      "descripcion": "Descripción del material 25",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-26",
-      "descripcion": "Descripción del material 26",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-27",
-      "descripcion": "Descripción del material 27",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-28",
-      "descripcion": "Descripción del material 28",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-29",
-      "descripcion": "Descripción del material 29",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-30",
-      "descripcion": "Descripción del material 30",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-31",
-      "descripcion": "Descripción del material 31",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-32",
-      "descripcion": "Descripción del material 32",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-33",
-      "descripcion": "Descripción del material 33",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-34",
-      "descripcion": "Descripción del material 34",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-35",
-      "descripcion": "Descripción del material 35",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-36",
-      "descripcion": "Descripción del material 36",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-37",
-      "descripcion": "Descripción del material 37",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-38",
-      "descripcion": "Descripción del material 38",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-39",
-      "descripcion": "Descripción del material 39",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "MATERIAL-40",
-      "descripcion": "Descripción del material 40",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "COMPONENTE-1",
-      "descripcion": "Descripción del componente 1",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "COMPONENTE-2",
-      "descripcion": "Descripción del componente 2",
-      "unidad": "UN",
-      "lote": false
-    },
-    {
-      "material": "COMPONENTE-3",
-      "descripcion": "Descripción del componente 3 (por lotes)",
-      "unidad": "UN",
+      "material": "10000740",
+      "descripcion": "Pintura epóxica gris RAL 7035",
+      "unidad": "L",
       "lote": true
     },
     {
-      "material": "COMPONENTE-4",
-      "descripcion": "Descripción del componente 4",
+      "material": "10000810",
+      "descripcion": "Riel DIN 35 mm x 2 m EN 60715",
       "unidad": "UN",
       "lote": false
     }
   ],
   "stock": [
     {
-      "material": "COMPONENTE-1",
-      "centro": "CENTRO",
-      "almacen": "ALM1",
+      "material": "10000215",
+      "centro": "1000",
+      "almacen": "0001",
       "lote": "",
       "libre": 6
     },
     {
-      "material": "COMPONENTE-2",
-      "centro": "CENTRO",
-      "almacen": "ALM1",
+      "material": "10000120",
+      "centro": "1000",
+      "almacen": "0001",
       "lote": "",
-      "libre": 50
+      "libre": 500
     },
     {
-      "material": "COMPONENTE-3",
-      "centro": "CENTRO",
-      "almacen": "ALM1",
-      "lote": "LOTE-1",
+      "material": "10000740",
+      "centro": "1000",
+      "almacen": "0001",
+      "lote": "LP-261104",
       "libre": 30
     },
     {
-      "material": "COMPONENTE-4",
-      "centro": "CENTRO",
-      "almacen": "ALM2",
+      "material": "10000810",
+      "centro": "1000",
+      "almacen": "0002",
       "lote": "",
       "libre": 20
     }
   ],
   "ordenesCompra": [
     {
-      "numero": "PEDIDO-P1",
-      "proveedor": "Nombre del proveedor",
-      "fecha": "2026-11-23",
+      "numero": "4500018732",
+      "proveedor": "Suministros Industriales del Sur S.A.C.",
+      "fecha": "2026-11-20",
       "posiciones": [
         {
           "pos": 10,
-          "material": "MATERIAL-01",
-          "descripcion": "Descripción del material 01",
-          "cantidadPendiente": 11,
+          "material": "10000125",
+          "descripcion": "Perno hex. 1/2\" x 2\" UNC gr. 5 zincado",
+          "cantidadPendiente": 250,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 20,
-          "material": "MATERIAL-02",
-          "descripcion": "Descripción del material 02",
-          "cantidadPendiente": 12,
+          "material": "10000126",
+          "descripcion": "Tuerca hex. 1/2\" UNC gr. 5 zincada",
+          "cantidadPendiente": 250,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 30,
-          "material": "MATERIAL-03",
-          "descripcion": "Descripción del material 03",
-          "cantidadPendiente": 13,
+          "material": "10000131",
+          "descripcion": "Arandela plana 1/2\" acero zincado",
+          "cantidadPendiente": 500,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 40,
-          "material": "MATERIAL-04",
-          "descripcion": "Descripción del material 04",
-          "cantidadPendiente": 14,
+          "material": "10000132",
+          "descripcion": "Arandela de presión 1/2\" zincada",
+          "cantidadPendiente": 480,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 50,
-          "material": "MATERIAL-05",
-          "descripcion": "Descripción del material 05",
-          "cantidadPendiente": 15,
+          "material": "10000140",
+          "descripcion": "Perno hex. 5/8\" x 3\" UNC gr. 5 zincado",
+          "cantidadPendiente": 120,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 60,
-          "material": "MATERIAL-06",
-          "descripcion": "Descripción del material 06",
-          "cantidadPendiente": 16,
+          "material": "10000141",
+          "descripcion": "Tuerca hex. 5/8\" UNC gr. 5 zincada",
+          "cantidadPendiente": 120,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 70,
-          "material": "MATERIAL-07",
-          "descripcion": "Descripción del material 07",
-          "cantidadPendiente": 17,
+          "material": "10000210",
+          "descripcion": "Plancha LAF 2.0 mm 1.2x2.4 m ASTM A1008",
+          "cantidadPendiente": 18,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 80,
-          "material": "MATERIAL-08",
-          "descripcion": "Descripción del material 08",
-          "cantidadPendiente": 18,
+          "material": "10000212",
+          "descripcion": "Plancha LAF 3.0 mm 1.2x2.4 m ASTM A1008",
+          "cantidadPendiente": 12,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 90,
-          "material": "MATERIAL-09",
-          "descripcion": "Descripción del material 09",
-          "cantidadPendiente": 19,
+          "material": "10000225",
+          "descripcion": "Plancha LAC 6.0 mm 1.5x6.0 m ASTM A36",
+          "cantidadPendiente": 4,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 100,
-          "material": "MATERIAL-10",
-          "descripcion": "Descripción del material 10",
-          "cantidadPendiente": 20,
+          "material": "10000310",
+          "descripcion": "Ángulo acero 2\"x2\"x3/16\" x 6 m ASTM A36",
+          "cantidadPendiente": 24,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 110,
-          "material": "MATERIAL-11",
-          "descripcion": "Descripción del material 11",
-          "cantidadPendiente": 21,
+          "material": "10000312",
+          "descripcion": "Ángulo acero 1 1/2\"x1 1/2\"x1/8\" x 6 m",
+          "cantidadPendiente": 36,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 120,
-          "material": "MATERIAL-12",
-          "descripcion": "Descripción del material 12",
-          "cantidadPendiente": 22,
+          "material": "10000330",
+          "descripcion": "Platina acero 2\" x 1/4\" x 6 m ASTM A36",
+          "cantidadPendiente": 15,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 130,
-          "material": "MATERIAL-13",
-          "descripcion": "Descripción del material 13",
-          "cantidadPendiente": 23,
+          "material": "10000415",
+          "descripcion": "Tubo cuadrado 40x40x2.0 mm x 6 m A500",
+          "cantidadPendiente": 20,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 140,
-          "material": "MATERIAL-14",
-          "descripcion": "Descripción del material 14",
-          "cantidadPendiente": 24,
+          "material": "10000418",
+          "descripcion": "Tubo rectangular 80x40x2.0 mm x 6 m A500",
+          "cantidadPendiente": 10,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 150,
-          "material": "MATERIAL-15",
-          "descripcion": "Descripción del material 15",
-          "cantidadPendiente": 25,
+          "material": "10000425",
+          "descripcion": "Tubo redondo SCH 40 2\" x 6.4 m ASTM A53",
+          "cantidadPendiente": 8,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 160,
-          "material": "MATERIAL-16",
-          "descripcion": "Descripción del material 16",
-          "cantidadPendiente": 26,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "10000510",
+          "descripcion": "Cable THW-90 14 AWG 600 V negro",
+          "cantidadPendiente": 300,
+          "unidad": "M",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 170,
-          "material": "MATERIAL-17",
-          "descripcion": "Descripción del material 17",
-          "cantidadPendiente": 27,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "10000512",
+          "descripcion": "Cable THW-90 12 AWG 600 V rojo",
+          "cantidadPendiente": 200,
+          "unidad": "M",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 180,
-          "material": "MATERIAL-18",
-          "descripcion": "Descripción del material 18",
-          "cantidadPendiente": 28,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "10000515",
+          "descripcion": "Cable THW-90 10 AWG 600 V azul",
+          "cantidadPendiente": 150,
+          "unidad": "M",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 190,
-          "material": "MATERIAL-19",
-          "descripcion": "Descripción del material 19",
-          "cantidadPendiente": 29,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "10000520",
+          "descripcion": "Cable NH-80 4 mm2 amarillo/verde",
+          "cantidadPendiente": 100,
+          "unidad": "M",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 200,
-          "material": "MATERIAL-20",
-          "descripcion": "Descripción del material 20",
-          "cantidadPendiente": 30,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "10000610",
+          "descripcion": "Terminal ojo 10 AWG M6 cobre estañado",
+          "cantidadPendiente": 4,
+          "unidad": "CJ",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 210,
-          "material": "MATERIAL-21",
-          "descripcion": "Descripción del material 21",
-          "cantidadPendiente": 31,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "10000612",
+          "descripcion": "Terminal puntera aislado 14 AWG",
+          "cantidadPendiente": 6,
+          "unidad": "CJ",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 220,
-          "material": "MATERIAL-22",
-          "descripcion": "Descripción del material 22",
-          "cantidadPendiente": 32,
+          "material": "10000630",
+          "descripcion": "Prensaestopa PVC PG-16 gris",
+          "cantidadPendiente": 40,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 230,
-          "material": "MATERIAL-23",
-          "descripcion": "Descripción del material 23",
-          "cantidadPendiente": 33,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000105",
+          "descripcion": "Electrodo E6011 1/8\" AWS A5.1",
+          "cantidadPendiente": 20,
+          "unidad": "KG",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 240,
-          "material": "MATERIAL-24",
-          "descripcion": "Descripción del material 24",
-          "cantidadPendiente": 34,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "30000106",
+          "descripcion": "Electrodo E7018 1/8\" AWS A5.1",
+          "cantidadPendiente": 25,
+          "unidad": "KG",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 250,
-          "material": "MATERIAL-25",
-          "descripcion": "Descripción del material 25",
-          "cantidadPendiente": 35,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000108",
+          "descripcion": "Electrodo E7018 5/32\" AWS A5.1",
+          "cantidadPendiente": 15,
+          "unidad": "KG",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 260,
-          "material": "MATERIAL-26",
-          "descripcion": "Descripción del material 26",
-          "cantidadPendiente": 36,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000210",
+          "descripcion": "Disco de corte metal 4 1/2\" x 1/16\"",
+          "cantidadPendiente": 5,
+          "unidad": "CJ",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 270,
-          "material": "MATERIAL-27",
-          "descripcion": "Descripción del material 27",
-          "cantidadPendiente": 37,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "30000212",
+          "descripcion": "Disco de corte metal 7\" x 1/16\"",
+          "cantidadPendiente": 3,
+          "unidad": "CJ",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 280,
-          "material": "MATERIAL-28",
-          "descripcion": "Descripción del material 28",
-          "cantidadPendiente": 38,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000220",
+          "descripcion": "Disco de desbaste metal 4 1/2\" x 1/4\"",
+          "cantidadPendiente": 4,
+          "unidad": "CJ",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 290,
-          "material": "MATERIAL-29",
-          "descripcion": "Descripción del material 29",
-          "cantidadPendiente": 39,
+          "material": "30000225",
+          "descripcion": "Disco flap zirconio 4 1/2\" grano 60",
+          "cantidadPendiente": 30,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 300,
-          "material": "MATERIAL-30",
-          "descripcion": "Descripción del material 30",
-          "cantidadPendiente": 40,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "30000310",
+          "descripcion": "Pintura anticorrosiva alquídica gris",
+          "cantidadPendiente": 12,
+          "unidad": "L",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 310,
-          "material": "MATERIAL-31",
-          "descripcion": "Descripción del material 31",
-          "cantidadPendiente": 41,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000312",
+          "descripcion": "Esmalte sintético negro brillante",
+          "cantidadPendiente": 8,
+          "unidad": "L",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 320,
-          "material": "MATERIAL-32",
-          "descripcion": "Descripción del material 32",
-          "cantidadPendiente": 42,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000320",
+          "descripcion": "Thinner acrílico estándar",
+          "cantidadPendiente": 40,
+          "unidad": "L",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 330,
-          "material": "MATERIAL-33",
-          "descripcion": "Descripción del material 33",
-          "cantidadPendiente": 43,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "30000410",
+          "descripcion": "Guante cuero caña larga para soldador",
+          "cantidadPendiente": 24,
+          "unidad": "PAR",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 340,
-          "material": "MATERIAL-34",
-          "descripcion": "Descripción del material 34",
-          "cantidadPendiente": 44,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000412",
+          "descripcion": "Guante cuero corto tipo driver",
+          "cantidadPendiente": 36,
+          "unidad": "PAR",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 350,
-          "material": "MATERIAL-35",
-          "descripcion": "Descripción del material 35",
-          "cantidadPendiente": 45,
+          "material": "30000420",
+          "descripcion": "Lente de seguridad claro ANSI Z87.1",
+          "cantidadPendiente": 24,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 360,
-          "material": "MATERIAL-36",
-          "descripcion": "Descripción del material 36",
-          "cantidadPendiente": 46,
+          "material": "30000430",
+          "descripcion": "Cinta aislante PVC 3/4\" x 20 m negra",
+          "cantidadPendiente": 50,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 370,
-          "material": "MATERIAL-37",
-          "descripcion": "Descripción del material 37",
-          "cantidadPendiente": 47,
+          "material": "30000440",
+          "descripcion": "Broca HSS 3/8\" DIN 338",
+          "cantidadPendiente": 12,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 380,
-          "material": "MATERIAL-38",
-          "descripcion": "Descripción del material 38",
-          "cantidadPendiente": 48,
+          "material": "30000445",
+          "descripcion": "Broca HSS 1/4\" DIN 338",
+          "cantidadPendiente": 20,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 390,
-          "material": "MATERIAL-39",
-          "descripcion": "Descripción del material 39",
-          "cantidadPendiente": 49,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "material": "30000450",
+          "descripcion": "Trapo industrial de algodón",
+          "cantidadPendiente": 50,
+          "unidad": "KG",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 400,
-          "material": "MATERIAL-40",
-          "descripcion": "Descripción del material 40",
-          "cantidadPendiente": 50,
+          "material": "30000460",
+          "descripcion": "Escobilla circular alambre 4\" M14",
+          "cantidadPendiente": 10,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         }
       ]
     },
     {
-      "numero": "PEDIDO-P2",
-      "proveedor": "Nombre del proveedor",
-      "fecha": "2026-11-23",
+      "numero": "4500018745",
+      "proveedor": "Ferretería Industrial Lima S.A.C.",
+      "fecha": "2026-11-21",
       "posiciones": [
         {
           "pos": 10,
-          "material": "MATERIAL-01",
-          "descripcion": "Descripción del material 01",
-          "cantidadPendiente": 11,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000105",
+          "descripcion": "Electrodo E6011 1/8\" AWS A5.1",
+          "cantidadPendiente": 20,
+          "unidad": "KG",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 20,
-          "material": "MATERIAL-02",
-          "descripcion": "Descripción del material 02",
-          "cantidadPendiente": 12,
-          "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "30000320",
+          "descripcion": "Thinner acrílico estándar",
+          "cantidadPendiente": 19,
+          "unidad": "L",
+          "centro": "1000",
+          "almacen": "0002",
           "tipoStock": "Libre utilización"
         },
         {
           "pos": 30,
-          "material": "MATERIAL-03",
-          "descripcion": "Descripción del material 03",
-          "cantidadPendiente": 13,
+          "material": "10000131",
+          "descripcion": "Arandela plana 1/2\" acero zincado",
+          "cantidadPendiente": 200,
           "unidad": "UN",
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0001",
           "tipoStock": "Libre utilización"
         }
       ]
@@ -775,56 +775,56 @@
   ],
   "ordenesProduccion": [
     {
-      "numero": "ORDEN-P1",
+      "numero": "1000452",
       "estado": "LIB",
-      "material": "MATERIAL-FABRICAR",
-      "descripcion": "Descripción del producto",
+      "material": "20000310",
+      "descripcion": "Tablero eléctrico de distribución TD-12 600x400 mm",
       "cantidad": 10,
       "unidad": "UN",
-      "fechaInicio": "2026-11-23",
+      "fechaInicio": "2026-11-25",
       "componentes": [
         {
           "pos": 10,
-          "material": "COMPONENTE-1",
+          "material": "10000215",
           "cantidadNecesaria": 10,
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "lote": ""
         },
         {
           "pos": 20,
-          "material": "COMPONENTE-2",
-          "cantidadNecesaria": 20,
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "material": "10000120",
+          "cantidadNecesaria": 80,
+          "centro": "1000",
+          "almacen": "0001",
           "lote": ""
         },
         {
           "pos": 30,
-          "material": "COMPONENTE-3",
+          "material": "10000740",
           "cantidadNecesaria": 5,
-          "centro": "CENTRO",
-          "almacen": "ALM1",
+          "centro": "1000",
+          "almacen": "0001",
           "lote": ""
         },
         {
           "pos": 40,
-          "material": "COMPONENTE-4",
+          "material": "10000810",
           "cantidadNecesaria": 8,
-          "centro": "CENTRO",
-          "almacen": "ALM2",
+          "centro": "1000",
+          "almacen": "0002",
           "lote": ""
         }
       ]
     },
     {
-      "numero": "ORDEN-SIN-LIBERAR",
+      "numero": "1000458",
       "estado": "ABIE",
-      "material": "MATERIAL-FABRICAR",
-      "descripcion": "Descripción del producto",
+      "material": "20000310",
+      "descripcion": "Tablero eléctrico de distribución TD-12 600x400 mm",
       "cantidad": 10,
       "unidad": "UN",
-      "fechaInicio": "2026-11-23",
+      "fechaInicio": "2026-11-30",
       "componentes": []
     }
   ]

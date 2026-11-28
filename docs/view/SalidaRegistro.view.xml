@@ -47,23 +47,23 @@
                 </OverflowToolbar>
             </headerToolbar>
             <columns>
-                <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
-                <Column width="9rem"><Text text="{i18n>colMaterial}"/></Column>
+                <Column width="3rem"><Text text="{i18n>colPos}"/></Column>
+                <Column width="6rem"><Text text="{i18n>colMaterial}"/></Column>
                 <Column><Text text="{i18n>colDescripcion}"/></Column>
-                <Column hAlign="End"><Text text="{i18n>colNecesaria}"/></Column>
+                <Column width="6rem" hAlign="End"><Text text="{i18n>colNecesaria}"/></Column>
                 <Column width="7rem"><Text text="{i18n>colEntregar}"/></Column>
-                <Column><Text text="{i18n>colUnidad}"/></Column>
-                <Column><Text text="{i18n>colStock}"/></Column>
-                <Column><Text text="{i18n>colCentro}"/></Column>
+                <Column width="6rem"><Text text="{i18n>colUnidad}"/></Column>
+                <Column width="7rem"><Text text="{i18n>colStock}"/></Column>
+                <Column width="5rem"><Text text="{i18n>colCentro}"/></Column>
                 <Column width="7rem"><Text text="{i18n>colAlmacenOrigen}"/></Column>
-                <Column width="8rem">
+                <Column width="7rem">
                     <HBox alignItems="Center">
                         <Label text="{i18n>colLote}" required="true"/>
                         <core:Icon src="sap-icon://message-information" tooltip="{i18n>ttLote}" class="sapUiTinyMarginBegin"/>
                     </HBox>
                 </Column>
                 <Column width="6rem" hAlign="Center"><Text text="{i18n>colConforme}"/></Column>
-                <Column visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
+                <Column width="7rem" visible="{reg>/columnas/tipoStock}"><Text text="{i18n>colTipoStock}"/></Column>
             </columns>
             <items>
                 <ColumnListItem highlight="{= ${reg>faltante} > 0 &amp;&amp; ${reg>conforme} ? 'Warning' : 'None' }">

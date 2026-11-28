@@ -6,3 +6,4 @@
 | 1.0 | 22/11/2026 | Flujo de entrada por compras (P00, P101-01 a P101-04) con las correcciones EH-02, EH-03, EH-04, EH-05, EH-07, EH-10, EH-11, EH-12, EH-13, EH-14 y EH-22. Datos de prueba de ejemplo. | R. Angulo |
 | 1.1 | 22/11/2026 | Flujo de salida por producción (P261-01 a P261-05) con las correcciones EH-02, EH-03, EH-04, EH-13, EH-16, EH-17 y EH-21 (también en P101-04). | R. Angulo |
 | 1.2 | 22/11/2026 | Complementos con las Tablas K1 y L3: EH-05 (el botón Mensajes solo aparece si hay mensajes y la lista espera a que esté dibujado), EH-08 (términos conformes / excluidas y rótulos de la Tabla K1), EH-18 (lote obligatorio cuando corresponde), EH-19 (mensajes de stock con los datos de la tabla) y EH-22 (ayuda contextual en «Texto de cabecera» y «Lote»). Publicación en GitHub Pages. Versión que validan los especialistas. | R. Angulo |
+| 1.3 | 27/11/2026 | Datos de prueba realistas de planta industrial y cabecera alineada con el contenido. | R. Angulo |

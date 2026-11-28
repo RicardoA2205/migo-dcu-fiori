@@ -1,1 +1,25 @@
 /* Enter your custom styles here */
+
+/* Alinea la cabecera (título o flecha de volver) y la barra de pasos con el contenido,
+   que usa sapUiMediumMargin (2rem). */
+
+/* Barra de pasos (subHeader): border-box para que el padding no sume 4rem al ancho
+   (si no, la página se desplaza en horizontal). */
+.sapMPage .sapMTB.sapMPageSubHeader,
+.sapMPage .sapMPageSubHeader > .sapMTB {
+    box-sizing: border-box !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Cabecera: sus contenedores van en posición absoluta y no respetan el padding de la barra,
+   así que se ajustan uno por uno. */
+.sapMPage .sapMPageHeader .sapMBarLeft:not(.sapMBarEmpty) {
+    padding-left: 2rem !important;                  /* flecha de volver */
+}
+.sapMPage .sapMPageHeader .sapMBarLeft.sapMBarEmpty + .sapMBarMiddle > .sapMBarPH {
+    padding-left: 2rem !important;                  /* título sin flecha (Inicio, Resultado) */
+}
+.sapMPage .sapMPageHeader .sapMBarRight {
+    padding-right: 2rem !important;                 /* botón de ayuda */
+}

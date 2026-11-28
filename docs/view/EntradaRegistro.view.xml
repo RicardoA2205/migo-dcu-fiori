@@ -62,7 +62,7 @@
             <columns>
                 <Column width="4rem"><Text text="{i18n>colPos}"/></Column>
                 <Column><Text text="{i18n>colMaterial}"/></Column>
-                <Column><Text text="{i18n>colDescripcion}"/></Column>
+                <Column width="20rem"><Text text="{i18n>colDescripcion}"/></Column>
                 <Column hAlign="End"><Text text="{i18n>colPendiente}"/></Column>
                 <Column width="8rem"><Text text="{i18n>colRecibida}"/></Column>
                 <Column><Text text="{i18n>colUnidad}"/></Column>
